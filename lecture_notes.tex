@@ -250,12 +250,12 @@
       0          & \textbf{I} \\
       \textbf{I} & 0
     \end{pmatrix} $$
-  These type of non linear equations can only be locally, but since the systems are Hamiltonian we can unearth the global existence and uniqueness of the solutions. Indeed we just need to show that using the energy constraints of the system the solutions are bounded for all time. For the impulsion this is trivial considering a potential global minimum :
+  These type of non linear equations can only be locally, but since the systems are Hamiltonian we can unearth the global existence and uniqueness of the solutions. Indeed we just need to show that using the energy constraints of the system the solutions are bounded for all time. For the impulsion this is trivial considering a potential at (?) global minimum :
 
   $$ \frac{\textbf{p}^T \textbf{M} ^{-1} \textbf{p} }{2} \leq E_0 - U_{min}$$
 
-  for the position we just need an assumption on the level sets of the potential energy. $$ \Sigma_{\alpha} = {\textbf{q}|U(\textbf{q} = \alpha) }$$
-  If these lebel are bounded then the solutions are bounded for all time. This is not the case for all potentials, this is why for solving this kind of equations we will add sometimes confining potentials to the system.
+  For the position we just need an assumption on the level sets of the potential energy. $$ \Sigma_{\alpha} = {\textbf{q}|U(\textbf{q} = \alpha) }$$
+  If these level are bounded then the solutions are bounded for all time. This is not the case for all potentials, this is why for solving this kind of equations we will add sometimes confining potentials to the system.
   \subsection{Map Flow}
 
   Since the Hamiltonian equations are solvable, it seems natural to define a map flow $\mathcal{F}$ such that for an initial condition $z_0$ and a considered point $z_t$ we have :
@@ -288,9 +288,9 @@
       0          & \textbf{I} \\
       \textbf{I} & 0
     \end{pmatrix} \nabla H = 0$$
-  Due to the $\mathcal{C}^2$ property of the Hamiltonian. The main consequence of this property is that the flow map is volume preserving, which has to be a important property of the integration algorithm to approximate the flow map.
+  Due to the $\mathcal{C}^2$ property of the Hamiltonian. The main consequence of this property is that the flow map is volume preserving, which has to be an important property of the integration algorithm to approximate the flow map.
 
-  Volume preservation is a key prroperty since it ensures that the numerical integration keeps the hamiltonian structure of the system, following the loiouville theorem i.e the conservation of the phase space volume along particles trajectories in the phase space.
+  Volume preservation is a key property since it ensures that the numerical integration keeps the hamiltonian structure of the system, following the Liouville theorem i.e the conservation of the phase space volume along particle trajectories in the phase space.
 
   \begin{figure}[H]
     \def\svgwidth{\linewidth}
@@ -305,9 +305,9 @@
   With $J = \begin{pmatrix}
       0           & \textbf{I} \\
       -\textbf{I} & 0
-    \end{pmatrix}$ the sympletic matrix. This property leeads to the conservation of the volume of the phase space, indeed we have  for the jacobian associated with the map : $\lvert \mathcal{F'}_t\rvert^2 = 1 $.
+    \end{pmatrix}$ the sympletic matrix. This property leads to the conservation of the volume of the phase space, indeed we have  for the jacobian associated with the map : $\lvert \mathcal{F'}_t\rvert^2 = 1 $.
 
-  One intersting point of symplectic maps is that they form a group (they preserved the composition) which can be used to build other more complex symplectic maps. For example to increase the order of sympletic integrators $\mathcal{G}_h$  approximating the flow map $\mathcal{F}_h$, we can also split wut Hamiltonian just dependant of the impulsion or the position. This is called the splitting method, which is based on the Trotter expansion of the flow map (Find sympletic form of splitted hamiltonian).
+  One interesting point of symplectic maps is that they form a group (they preserve the composition) which can be used to build other more complex symplectic maps. For example to increase the order of sympletic integrators $\mathcal{G}_h$  approximating the flow map $\mathcal{F}_h$, we can also split wut(<--??? the maybe ??) Hamiltonian just dependant of the impulsion or the position. This is called the splitting method, which is based on the Trotter expansion of the flow map (Find sympletic form of splitted hamiltonian).
 
   \subsection{Error Analysis for Hamiltonian splitting}
 
@@ -316,11 +316,11 @@
 
   \paragraph*{Lie Derivatives}
 
-  In the case of a non-Linear Hamiltonian system, the flow map can be approximated by the Lie derivative of the Hamiltonian, we would like to find again the conveninant results :
+  In the case of a non-Linear Hamiltonian system, the flow map can be approximated by the Lie derivative of the Hamiltonian, we would like to find again the convenient results :
 
   $$ \mathcal{F}_t = \exp(tA)\textbf{z}$$
 
-  Let's consider a functionnal $\Phi$ f the phase space, the Lie derivative of $\Phi$ is defined as :
+  Let's consider a functionnal $\Phi$ of the phase space, the Lie derivative of $\Phi$ is defined as :
 
   $$ \mathcal{L}_f \Phi = \nabla \Phi \cdot A$$
 
@@ -339,27 +339,27 @@
 
   \paragraph*{Poisson Brackets}
 
-  A common notation introduced in Hamiltonian mechanics is the Poisson bracket, which is defined as :
+  A common notation introduced in Hamiltonian mechanics are Poisson brackets, which are defined as :
 
   \begin{align*}
     \\ \{g_1, g_2 \} &= \sum_{i = 1}^N (\pdv{g_1}{q_i}\pdv{g_2}{p_i} - \pdv{g_2}{q_i}\pdv{g_1}{p_i})
     \\ &= \nabla g_1^T \textbf{J} \nabla g_2
   \end{align*}
 
-  Considering a smoooth scalar value function $F$ of the phase space, we can show that the Lie derivative of $F$ is given by the Poisson bracket of $F$ and the Hamiltonian :
+  Considering a smooth scalar value function $F$ of the phase space, we can show that the Lie derivative of $F$ is given by the Poisson brackets of $F$ and the Hamiltonian :
 
   $$ \mathcal{L}_{\textbf{J} \nabla H} F = \mathcal{L}_H F = \{F, H\}$$
 
-  Poisson brackets can be related to the Lie derivating noticing that for every real valued function $f$: $$[\mathcal{L}_{H_1}, \mathcal{L}_{H_2}]f = \mathcal{L}_{\{H_1, H_2\}}f$$
+  Poisson brackets can be related to the Lie derivating noticing that for every real-valued function $f$: $$[\mathcal{L}_{H_1}, \mathcal{L}_{H_2}]f = \mathcal{L}_{\{H_1, H_2\}}f$$
 
-  \subsubsection{Error Analysis for non Commuting Hamiltonian}
-  The main idea behinds this study is to consider integration method as a splitting of the Hamiltonian into several parts oftenly independant of one of the two system of coordinates $(\textbf{q}, \textbf{p})$, as we will see further. The poisson brackets are linear with respect to the Hamiltonian, which allows us to write the following considering $H = H_1 + H_2$,
+  \subsubsection{Error Analysis for non-Commuting Hamiltonian}
+  The main idea behind this study is to consider integration method as a splitting of the Hamiltonian into several parts oftenly independant of one of the two systems of coordinates $(\textbf{q}, \textbf{p})$, as we will see further. The Poisson brackets are linear with respect to the Hamiltonian, which allows us to write the following considering $H = H_1 + H_2$,
 
   $$\mathcal{L}_H = \mathcal{L}_{H_1} + \mathcal{L}_{H_2}$$
 
   The flow map of the system is then defined as : $\mathcal{F}_t(\textbf{z}) = e^{t()\mathcal{L}_{H_1} + \mathcal{L}_{H_2})}\textbf{z}  $
 
-  The splitting method has the following flow map : $$\mathcal{G}_th= e^{h\mathcal{L}_{H_1}}e^{h\mathcal{L}_{H_2}}$$ Which is not the same as the true flow map. To evaluate the error done considering the splitted Hamiltonian, we can use the Baker-Campbell-Hausdorff formula [CITE] and the correspondance between the Lie derivative and the Poisson bracket unearthing :
+  The splitting method has the following flow map : $$\mathcal{G}_th= e^{h\mathcal{L}_{H_1}}e^{h\mathcal{L}_{H_2}}$$ Which is not the same as the true flow map. To evaluate the error done considering the splitted Hamiltonian, we can use the Baker-Campbell-Hausdorff formula [CITE] and the correspondance between the Lie derivative and the Poisson brackets unearthing :
 
   $$ e^{h\mathcal{L}_{H_1}}e^{h\mathcal{L}_{H_2}} = e^{ h \mathcal{L}_{\tilde{H}_h}}$$
 
@@ -371,16 +371,16 @@
   \end{multline*}
 
 
-  From this we can easily understand that as long as the two splitted Hamiltonian do not commute, we have at least an linear error (on example is the sympletic Euler Method). One way to do that, is to find a split with commutating hamiltonian, or to split $H$ into three hamiltonian such that that the linear term vanishes (such as the Velvet velovity \& position method). The main indea behind this  development was to show that the flow map $\mathcal{F}_t$ we approximate using the other $\mathcal{G}_t$ stands in the splitting method for an exact solution to a other (but similar) hamiltonian system.
+  From this we can easily understand that as long as the two splitted Hamiltonian do not commute, we have at least a linear error (one example is the sympletic Euler Method). One way to do that is to find a split with commutating hamiltonian, or to split $H$ into three hamiltonians such that the linear term vanishes (such as the Velvet velocity \& position method). The main idea behind this  development was to show that the flow map $\mathcal{F}_t$ we approximate using the other $\mathcal{G}_t$ stands in the splitting method for an exact solution to a other (but similar) hamiltonian system. (!!!PAS CLAIR DU TOUT CA!!!)
 
-  To put in a nutshell the splitting method allows us to build sympletic integrator using Hamiltonian transformations. Not all intersteing integrators have sympletic structures, but they should all conserve volume in the phase space.
+  To put in a nutshell, the splitting method allows us to build sympletic integrator using Hamiltonian transformations. Not all interesting integrators have sympletic structures, but they should all conserve volume in the phase space.
 
 
 
 
   \section{Time Integration}
 
-  Here we will restrict our study to linear system. To perform time integration, we discretize time into small intervals $\delta t$ . At each time step $t_{n+1}=n \delta t$, we approximate the change in the system using matrix iteration.
+  Here we will restrict our study to linear system. To perform time integration, we discretize time into small intervals $\delta t$ . At each time step $t_{n+1}=n \delta t$, we approximate the change in the system using matrix iterations.
   $$ \begin{pmatrix}
       x(n\delta t) \\
       y(n\delta t)
@@ -389,7 +389,7 @@
       y(0)
     \end{pmatrix}$$
 
-  The goal is then to find the correct matrix such that iterating over time will not change the invariance of the system. To fitt he previous notation the flow map can be defined as :
+  The goal is then to find the correct matrix such that iterating over time will not change the invariance of the system. To fit the previous notation the flow map can be defined as :
   $$\mathcal{F}_{\delta t}(\textbf{z} ) = T(\delta t)\textbf{z} $$
 
   \subsection{Application to the Harmonic Oscillator}
@@ -420,7 +420,7 @@
     \\ &=  \exp(\textbf{J}h)
   \end{align*}
 
-  Here we related as did previously the flow map to the derivative operation for our system.
+  Here we related, as done previously, the flow map to the derivative operation for our system.
   For the Hamiltonian we find :
 
   $$ H = \frac{\mathcal{H}}{k_BT} = \frac{1}{2}(\Pi^2 + \xi^2)$$. Then let's consider a microstate of the system $\ket{\tau} = \begin{pmatrix}
@@ -433,7 +433,7 @@
       \cos(\delta \tau)         & \frac{1}{\omega}\sin(\delta \tau) \\
       -\omega \sin(\delta \tau) & \cos(\delta \tau)
     \end{pmatrix}$$
-  Solvning the characteristic equation $\lVert \mathcal{T} - \lambda I\rvert = 0$, we unearth the eigenvalues.
+  Solving the characteristic equation $\lVert \mathcal{T} - \lambda I\rvert = 0$, we unearth the eigenvalues.
   $$ \lambda_\pm = \exp(\pm i \delta \tau), $$
 
   Considering the two \textbf{orthogonal}  eigenvectors $\ket{\pm}$, we easily show that :
@@ -462,7 +462,7 @@
 
   \subsubsection{Euler Algorithm \& Propagator}
 
-  The Euler algorithm is the simplest algorithm to perform time integration, based on the first order approximation in Taylor expansion. We obtain the following propagation matrix :
+  The Euler algorithm is the simplest algorithm to perform time integration, based on the first-order approximation in Taylor expansion. We obtain the following propagation matrix :
 
   $$ \mathcal{T}(\delta \tau) =
     \begin{pmatrix}
@@ -471,7 +471,7 @@
     \end{pmatrix}
   $$
 
-  Which is not unitary, and thus does not conserve the energy of the system. We can show that the energy of the system is not conserved over time, though the same reasoning as before. The two eigenvalues of the matrix are :
+  Which is not unitary, and thus does not conserve the energy of the system. We can show that the energy of the system is not conserved over time, through the same reasoning as before. The two eigenvalues of the matrix are :
 
   $$ \lambda_\pm = 1 \pm i \delta \tau$$
 
@@ -502,7 +502,7 @@
     \end{pmatrix}
   $$
 
-  Here we find an unitary matrix, which conserves the pseudo energy of the system over time. Indeed using this scheme the eigenspaces are not orthogonal anymore, the true energy is then not conserved however we can still study the conserved quantities and show that :
+  Here we find a unitary matrix, which conserves the pseudo energy of the system over time. Indeed using this scheme the eigenspaces are not orthogonal anymore, the true energy is then not conserved however we can still study the conserved quantities and show that :
 
   \begin{align*}
     \expval{A}{0} & = \expval{A}{\tau}
