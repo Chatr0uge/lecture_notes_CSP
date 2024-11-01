@@ -167,10 +167,6 @@
 
 \begin{document}
 
-% Custom header setup with tabular
-
-
-
 \fontsize{9}{10}\selectfont%
 
 \renewcommand{\contentsname}{Contents} % Rename ToC title
@@ -486,7 +482,7 @@
 		\\
 	\end{align*}
 
-	This divergence of the system can be seen in the following figure \cref{fig:HarmonicOscillator}
+	This divergence of the system can be seen in the following figure 
 
 	\subsubsection{Verlet Algorithm \& Propagator}
 
@@ -535,10 +531,16 @@
 	\end{figure}
 	This is quite relevant to notice that for periodic system the euler algorithm is definitely not stable due to the non conservation of the volume. We can also see that as a consequence of taking the tangent for each time steps as the true flow map, since it will leads us further from the trajectory in the phase space at each time step. This is why the velvet algorithm is a better choice for time integration of Hamiltonian systems.
 
+    	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{./figures/HarmonicOscillator.pdf}
+		\caption{\label{fig:Velevet_euler} To have a more general view of the efficiency of the integration scheme using a simple Harmonic oscillator we plotted the phase space trajectories for the Euler and the Velvet Algorithm, for two different timestep values}
+	\end{figure}
+
 	\chapter{Constant Temperature Dynamics}
 	
-    In molecular dynamics simulations, maintaining a constant temperature is essential for studying temperature-dependent properties, sampling thermodynamic ensembles, and ensuring accurate results. Various thermostats have been developed to control the temperature of the system, each with its own advantages and limitations. In this chapter, we will explore some common thermostats used in constant-temperature molecular dynamics simulations and discuss their properties.
-	In constant-temperature Molecular Dynamics, thermostats are essential to ensure that the system stays at a desired temperature, enabling accurate sampling of thermodynamic ensembles and studying temperature-dependent properties. Without a thermostat, temperature fluctuations, numerical artifacts, or deviations from the intended ensemble could lead to nonphysical results. Thermostats such as Nosé-Hoover, Langevin, and velocity rescaling provide various ways to control the temperature, depending on the specific needs of the simulation.
+    In molecular dynamics simulations, maintaining a constant temperature is essential for studying temperature-dependent properties and sampling the right thernodynamic ensemble. Various thermostats have been developed to control the temperature of the system, each with its own advantages and limitations. In this chapter, we will explore some common thermostats used in constant-temperature molecular dynamics simulations and discuss their properties.
+
     \section{Different Ensembles}
 
 	In statistical physics, an ensemble is a large collection of hypothetical copies of a system, each representing a possible state that the system can be in. Ensembles are used to describe the macroscopic properties of systems based on the statistical behavior of their microscopic components. The concept of ensembles is fundamental in statistical mechanics because it allows the connection between microscopic interactions (the behavior of individual particles) and macroscopic observables (such as temperature, pressure, and magnetization).
@@ -568,21 +570,363 @@ then if we develop the entropy around the mean energy of the system we get :
 
 $$ p_\mathcal{S} = \frac{1}{Z}\exp \left( - \frac{E_S}{k_B T_0}\right)$$
 
-This stands for the Boltzmann-Gibbs distribution with $Z$ defining the partition function of the canonical ensemblem and verifying the following relation : $$ Z = \sum_\eta \exp(-E_\eta / k_B T_0) $$. 
+This stands for the Boltzmann-Gibbs distribution with $Z$ defining the partition function of the canonical ensemblem and verifying the following relation : 
+$$ Z = \sum_\eta \exp(-E_{\mathcal{S}} / k_B T_0) $$.
+
+A simple formulation of the partition function can be derived counting the degeneracy of the Energy level $\omega = e^{\mathcal{S}(e)/k_B}$. This will lead to the following expression : 
+
+\begin{equation}
+    Z = \int \exp(-\beta (E - T_0 \mathcal{S}(E))) dE
+    \label{eq:partition_canonical}
+\end{equation}
+
+This motivates the definion of the free energy $F = E - T \mathcal{S}$, and developping this latter around its minimum at the second order in the integrand gives the following : 
+
+\begin{equation}
+    Z = e^{-\beta (E^* - T_0 \mathcal{S}(E^*))}\sqrt{\frac{2\pi k_B}{- \pdv[2]{\mathcal{S}(E^*)}{E}}} 
+    \label{eq:partition_canonical}
+\end{equation}
+This can be used to prove that the free energy is minimal at equilibrium in the thermodynamic limit. But here we will show that this imply a gaussian distribution of the energy.  Indeed using the previous calculation is leads to : 
+
+$$ p(E) \propto e^{\frac{(E - E^*)^2}{2 k_B} \pdv[2]{\mathcal{S}(E^*)}{E}}$$
+The study of the second moment then unearth : 
+\begin{equation}
+    \langle \Delta E^2 \rangle = - k_B \pdv[2]{\mathcal{S}(E^*)}{E} = k_B T_0^2C_V
+    \label{eq:fluctuations_energy}
+\end{equation}
+With $C_V = \pdv{E}{T}_{(eq,N,V)}$ the heat capacity at fixed volume. This implied that the considering this latter at constant in a small range of temperature the energy distribution is a gaussian whose width is proportinal to $T^2$.
 \section{Thermostats}
-This huge reservoir we used in the canonical ensemble is called a thermostat and is really conveniant to dissipate external constraints apply on our system $\mathcal{S}$ while conserivng the temperature. This object can be defined in several ways from deterministic thermostats to stochastic thermostats. 
-\subsection{Langvin Thermostat}
-The Langevin thermostat is a stochastic thermostat that introduces a friction term and a random force to the equations of motion. This thermostat mimics the effect of a heat bath on the system, providing a way to control the temperature and simulate the system's interaction with its environment. The Langevin equatiions are given by : 
-$$ 
+This huge reservoir we used in the canonical ensemble is called a thermostat and is really conveniant to dissipate external constraints apply on our system $\mathcal{S}$ while conserivng a velocity in rough correspondance with temperature. This reservoir has to be able to exert forces and abosrb enery from the system, this interaction can be defined in several ways from deterministic to stochastic method.
+\subsection{Stochastic thermostat Thermostat}
+\subsubsection{Andersen Thermostat}
+The Andersen thermostat consists in refreshing the velocities of particles with a given probability at each timestep which $ P = v \delta t$ with the collision rate $v$. The resfresh process is done by drawing a new velocity from the Boltzmann distribution at the given temperature, this can be done from scrambling or for every particles. This method is really simple and do not introduce concerns about ergodicity. However, despite the equation of motion being unchanged too high collision rate can dominate the underlying dynamics, slowing down the speed of exploring the phase space, and breaking the dynamics. Indeed it will leads to loss of memory and exponential decay of autocorrelation functions, while it is not the case in many MD systems.
+
+In order to tackle this issue Andersen proposed $\nu \propto C_T \rho^{\frac{2}{3}}N^{-\frac{2}{3}}$ as a typical collision rate such that it should preserve the dynamics in most cases.
+\subsubsection{Langevin Thermostat}
+Changing the dynamics of the system 
+
+The Langevin thermostat is a stochastic thermostat that introduces a friction term and a random force to the modified equations of motion. This thermostat mimics the effect of solvant particles collisions on the particles of the system (like the \textbf{Anderson} thermostat). The random force is a gaussian force whose amplitude is chosen independantly from the dynamics but only on the Temperature of the system and the friction coefficient, so the more we damp the system the more we have to excitate it, this ensure that eventough we increase the damping effect the exploration of the phase space will not be too slow despite we broke the dynamics (as for the Andersen thermostat), on the other hand if we decrease the damping the exploration of the canonical distribution o energy will be djsaijdslower.  The position Langevin equatiions in an harmonic potential in stationary state are given by : 
+$$
 \begin{cases} 
 0 = \xi v(t) - kx(t) + f(t)\\
-\langle f(t)f(t')\rangle = 2k_B T \xi \delta(t - t')\\
+\langle f(t)f(t')\rangle = A \delta(t - t')\\
 \langle f(t)\rangle = 0
 \end{cases} 
 $$
 
-With the characteristic time $\tau = \xi/k$ and the friction coefficient $\xi$.
+With the characteristic time $\tau = \xi/k$ and the friction coefficient $\xi$. The solution can be written as following : 
 
-\end{multicols}    
+$$ x(t) = x_0 e^{-t/\tau} + \tau^{-1}\int_{0}^{t}e^{-(t - t') / \tau} f(t')dt'$$
 
+\paragraph*{Amplitude of the noise}
+And one can easly assert what we previously saw regarding the independance of the random force with the dynamics.
+\begin{align*}
+    \langle x(t)^2 \rangle &= A \xi^{-2} \int_{-\infty}^{t} e^{-2(t - t')/\tau}    \\                     
+                           &= A \xi^{-2} \frac{\tau}{2} = \frac{k_B T}{k} 
+\end{align*}
+We then got the following : $A = 2 \xi k_B T $, this is a pretty interesting results since the noise amplitude is directely proportionnal to the friction constant (the more we damped the more we excitate).
+\paragraph*{Mean Square Displacement}
+At very short time the $t$ the mean square displacement (\textbf{msd}) $\langle \delta r^2\rangle$ is only given by inertial effects (expending at the first order) and using the equipartition theorem on the Kinetic energy, 
+
+    $$\langle \delta r^2\rangle = d \frac{k_B T}{m}t^2$$
+For longer timescales we have to study the effect of the friction term : 
+\begin{align*}
+  \langle \left( x_t - x_0\right)\rangle^2 &= 2 \left(\langle x^2 \rangle - \langle x_t x_0\rangle \right),\\
+ &= 2\frac{k_B T}{\tau} \left(1 - e^{-t/\tau}\right)\\
+\end{align*}
+    this is done using the equipartition theorem and : 
+     $$\langle x_t x_0 \rangle = 2 \frac{k_B T}{\tau}e^{-t/ \tau} $$
+
+For time $ t \ll \tau$ this leads to a diffusive process revovering the Enstein relatyion with the difusion constant : 
+ $ D = \frac{k_B T}{\xi}$, 
+
+  $$\langle \left( x_t - x_0\right)\rangle^2  = 2Dt$$
+
+The $\tau$ constant is oftenly several order of magnitude above the chacteristic time of the dynamics [CITE]. So we will generally considerate only the inertial and the diffusive regime
+
+
+\begin{align}
+    D &= \frac{1}{2}\lim_{t \rightarrow \infty} \dv{\delta r^2}{t} \label{eq:msd_grad}\\
+    D &= \frac{\delta r^2}{2t} \label{eq:msd_diff}
+\end{align}
+
+
+One can note that the memory loss using the Langevin thermostat will be continuously impacted by the white noise, we used for sampling the canonical ensemble, leading to corrupted autocorrelation functions. To deal with that one can implement an memory term in the nose [CITE], which has to be choosen carrfully to not break the dynamics of the system. In addition this stochasticity break the continous behavior of the system, and leads to discontinuity in average variables.
+\subsection{Detrministic Thermostat}
+
+Studying the stochastics thermostats leads obviously to find and tweaks all the parameters such that we can preserve the physical behaviour of the system, one can argue that we can use deterministic method to do the same sampling of the canonical ensemble, however these kind of methods generally lacks of ergodicity, and harly reproduce the typical variation of the Kinetic Energy in the canonical ensemble [CITE].
+
+\subsubsection{Velocity Rescaling}
+The simplest way to obtain a constant temperaure dynamics is to rescale the velocity by a factor :
+\begin{equation}
+    v'=\sqrt{\frac{K}{\mathcal{K}}}v 
+    \label{eq:velocity_rescaling}
+\end{equation}
+With $K, \mathcal{K}$ respectively the total Kinetic energy and the desired Kinetic energy derived from the targeted temperature. 
+Evans and Morriss (1983b) have shown that it leads to the following ensemble distrubution  $p \left( \textbf{r}, \textbf{q} \right) $: 
+\begin{equation}
+    \label{eq:distribution_velocity_rescaling}
+     \delta( K( \textbf{p}) - K_0) \delta( \textbf{P} - \textbf{P}_0 ) \exp \left( \frac{-V(\textbf{r})}{k_B T} \right) 
+\end{equation}
+
+With $\textbf{P}, K$ respectively the total momentum and kintetic energy. For the conformation propability distribution it is clearly the canoncial one. For the momentum one (SEE) it does not fit the canoncial distribution. Which can lead to smaller oscillation in kinetic energy than the ones in the canonical ensemble. One can propose to add a specific timescale to relax the normalizationm which defines the Berendsen thermostat, where the velocity is this time slowing rescaled to the desired value : 
+
+\begin{equation}
+    \textbf{v}' = \textbf{v} \sqrt{1 + \frac{\delta t }{\tau}(\frac{K}{\mathcal{K}} - 1)}
+    \label{eq:Berendsen thermostat}
+\end{equation}
+
+With $\tau$ the relaxation time, this method is really simple and can be used for equilibration, however it is not time reversible, and one can also show [CITE] so rescaling the velocity seems a too strong constraint to sample correctly the canonical ensemble. On average, this will lead to the same results as canonical sampling since every ensemble is, in the thermodynamic limit, equivalents, however for fluctuations dependant observable this will exibit wrong results.  These concerns were of strong interest in the 80's, leading to several (partial) solution. 
+
+One way to solve this is to introduce a random velocity rescaling to mimic the fluctuations in the canonical ensemble, this can be done using the simple (\ref{eq:velocity_rescaling}) rescaling or the Berendsen rescaling (\ref{eq:Berendsen thermostat}). To do so we just use a random pick for the Kinetic Energy drawn from the canonical distribution. 
+$$ v' = \sqrt{\frac{\bar{K}}{\mathcal{K}}}, \quad \bar{K} \in $$
+This is called \textbf{Canonical Velocity rescaling} (CVR), and as shown by (Bussi), under the assumption of ergodicity this sample correctly the canonical ensemble. One can argue that the dynamics can be altered, because of this stochasticity. 
+
+A other totally deterministic approach is the Nose-Hoover formulation of the Dynamics.
+
+\subsubsection{Nose-Hoover Thermostat}
+The main idea here is to extend the system using two a new coordinate $s$ and a momentum $p_s$ representing the reservoir, the energy is then allowed to flow between the system and the reservoir. This leads to the following hamiltonian of the total system :
+
+$$\mathcal{H} = H(\textbf{p}, \textbf{r}) + \frac{p_s^2}{2Q} + gk_BT$$
+With $Q$ the thermal inertia of the reservoir, $g$ the number of degree of freedom of the system. The choices of these parameter must me carefully done in order to ensure close coupling between thernmostating and dyncamics. The ensemble distribution is then :
+$$\exp(\frac{-H(\textbf{q,p})}{k_BT}) \exp(\frac{-p_s^2}{2Qk_BT})$$
+This beautifully stands for the canonical distribution in $\textbf{q,p}$. However Nosehimself found that this approach was difficultly exploring the phase for very simple system such as harmonic oscillator. Indeed, 
+Nothing to drive the drive the fluctuations of $p_s$ [CITE] and fluctuations of the thermostating velocites are necessary to ensure the ergodicity of the system, since it will fill difficulty the phase space (coupling between the system and the reservoir). 
+One possible solution is nose-hoover thermostatic chains, in order to drive the thermostat velocities with other reservoirs, this stands with the \textbf{CVR} as a perfect solution but Bussi argued we lost the beauty and the simplicity of the theory multiplying the thermostatic chain.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=1\linewidth]{./figures/NoseHooverChain.png}
+    \end{center}
+    \caption{length 2 Nose Hoover Chain applied on harmoic oscillator, trajectories are cought in an attractor, we do not recover the cannonical ensemble distribution (increase the number of chains [CITE], from [CITE]}\label{fig:NH-chain}
+\end{figure}
+
+\subsection{Comparing Thermostats}
+Several studies can be done to compare the thermostat,the probability distribution function of the energy to see if it matches the canonical one, with high level of fluctuation. Regarding the dynamics we have to see if the velocity autocorrelation function is not dominated by thermostating effect, leading to corrupted transport coefficient calculation. 
+\subsubsection{Energy Distribution}
+Using (\ref{eq:fluctuations_energy}) we unearthed that the typical fluctuations of the energy in the canonical ensemble should be quite important, proportional to $T^2$. To ckeck which thermostat was able to mimic these fluctuations, we simulated a simple \textbf{LJ}-fluids with 32 particles equilibrated by different thermostats. The first step of the study was to calculate $C_V$ for this system, to do so we use the \textbf{CVR}, and showed that the heat capacity was remaining constant in the range of study. 
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=1\linewidth]{figures/MD_energy_temperature.pdf}
+    \end{center}
+    \caption{Energy over Temperature, this plot unearths a value of Heat capacity at fixed volume : $C_V = 3.5e^1 \pm 1$}\label{fig:HC}
+\end{figure}
+
+Knowing that we can estimate the canonical distribution of the energy at second order using our previous study (\ref{eq:fluctuations_energy}).\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=1\linewidth]{figures/thermostats_PDF.pdf}
+    \end{center}
+    \caption{On the left we plots PDFs of potential $V$, kinetic $K$ and total energy $E$ for several thermostats. On the right we plot the normalized phase space hexbin histogram (in the sens of explorated domain size}\label{fig:PDF-th}
+\end{figure}
+ As intended the \textbf{Maxwell Boltzmann, Andersen, CVR} sample correctly the canonicla distribution of energy, which appears normal considerating their stochastic behavior. For the \textbf{VR, Berendsen} thermostat their non-canonical properties are clearly demonstrated with very small fluctuations of the Kinetic energy. However, one can notice on the fig \ref{fig:PDF-th} that the phase space exploration is unefficient for the \textbf{Maxwell-Boltzmann, Andersen} thermostat, with a very restricted exploration of the conformation space, this is mainly due to the fact that we broke the system dynamic, thermostating the velocities too oftenly for this kind of thermostat. This issue does not appeared in the three other thermostats, where the phase space exploration is efficient.
+
+ To put ot in a nutshell thermostating is a subtle problem where we have to find the right equilibrium between sampling correctly the ensemble we want and the phase space in a reasonable time without breaking the dynamics, and ensuring ergodicity.
+
+\subsection{Calculating Transport Coefficients}
+To check if the thermostats preserve the physics of the system, we can study auto-correlations functions. Indeed refering to (Haile and Gupta, 1983), suitable thermostats should preserve the auto-correlations function of the velocity. It is simply a way of cheking if the characteristic times of the system are unchanged. In addition to that a whole theory is dedicated to recover transport coefficient from autocorrelation functions (Green-Kubo relations). Here we will focus on the diffusion constant, which can be calculated from the velocity autocorrelation function (VACF).
+
+\subsubsection{Long time tails}
+In our simulated \textbf{LJ}-system the autocorrelaion function of the system should decay slowly at large times, this is called long time tails phenomenon and is universalin this kind of fluid system. The first apparition of this result in the scientific litterature was back in the 70's witj the work of Alder and Wainwright simulating hard sphere. Indeed they unearthed a long time tailed of the form $\sim t^{-\frac{d}{2}}$ contradicting the believed exponential decay of autocorrelation function (If we suppose that the dynamic follows the Langevin equation it is quite straightforward that it is the case). This dependancy was studied afterward by Pomeau and Résibois using long times hydrodynamics arguments. 
+
+The main idea is rely on the local equilibrium implied by the presence of multiple particle fig.\ref{fig:long_time_tail}.b) these latter will interact between each other, leading to a constant velocity in a small volume $\Omega_t$ around the particle of interest, if you consider n particle interacting in this small volume then : 
+ $$v(\tau) = v(0)/n \Omega_t$$
+ This volume will spread with time fig.\ref{fig:long_time_tail}.c) dominated by hydrodynamic long time viscosity effect : $$\Omega_t = (\nu t)^{\frac{d}{2}}$$ with $d$ the dimensionallity of the system. This leads to the following expression for the velocity autocorrelation function : 
+ \begin{equation}
+     v(\tau) \sim  v(0) \left( \frac{1}{\nu t} \right)^{\frac{d}{2}}     
+    \label{eq:long_time_tail}
+ \end{equation}
+\begin{figure}[H]
+		\def\svgwidth{\linewidth}
+		\input{./decay_schema.pdf_tex}
+        \caption{Schematics picturing the slow decay of autocorrelation functions, redraw from (Pomeau, Resibois)}
+        \vspace{0.15cm}
+        \label{fig:long_time_tail}
+\end{figure}
+
+This dissipative spreading of the small volume $\Omega_t$ can be pictured by the following reasoning : considering a particle interacting in a repulsive way with others particles, this interaction will create an eddy behind the particle that will ensure that the particle continue in its original direction during a sufficiently long time. 
+\paragraph*{Memory loss}
+This slow memory loss is a key feature of the system, and can be used to check if the dynamics of the system is preserved by the thermostat. Indeed if the thermostat is too strong, the long time tail will be altered.
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=1\linewidth]{figures/velocity_autocorrelation.pdf}
+    \end{center}
+    \caption{Normalized Velocity autocorrelation function}\label{fig:VCAF-th}
+\end{figure}
+
+
+\paragraph*{Dependance of the density}
+
+To fall in this regime the system has to be dense enough as highlighted by [CITE]. Indeed the long time tail is a collective effect, and will be more pronounced in dense system, where the particle are more likely to interact with each other and the vortex formation may not be sustained. To ckeck this behavior we simulated the same 2d system. Since the regime we studies should be dominated by collisions, we must know the time between the collision, the Enskog kinetic theory predicts : 
+
+ \begin{equation}
+    \tau_E  = \frac{1}{4 \rho \sigma^2 g(\sigma)} \sqrt{\frac{m}{\pi k_B T}}
+    \label{eq:mean_time_collision}
+ \end{equation}
+ With $g(\sigma)$ the radial distribution function at the contact distance $\sigma$, this will be the characteristic length of the \textbf{LJ} potential in our case. For hard spheres it gives the following [CITE] : $$ g(\sigma) = \frac{1 - \pi \sigma^3 \rho / 12}{(1 - \pi \sigma^3 \rho / 6)^3}$$
+We then decided to normalize the time by this time, and plot the VACF for different densities. Hence the density dependancy should not play a role anymore if it has only an effect on the collision time.
+ \begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=1\linewidth]{figures/velocity_autocorrelation_density.pdf}
+    \end{center}
+    \caption{Normalized Velocity autocorrelation function over the approximated frequency of collision.}\label{fig:VCAF-thod}
+\end{figure}
+The density dependancy is not visible anymore except for very low or high collision frequency, and the \textbf{VACF} arounf the order of magnitude of the collision time is as expected comparable to $\sim \tau^{-1}$
+\subsubsection{Calculation of Diffusion Constant}
+The calculation of the velocity autocorrelation function is of great interest since it can be used to calculate the diffusion constant of the system, indeed we have : 
+
+\begin{align*}
+    D &= \lim_{t \rightarrow \infty} \frac{1}{2t} \langle \Delta r^2(t) \rangle \\
+    &= \lim_{t \rightarrow \infty} \frac{1}{2t} \int_{0}^{t} \int_{0}^{t} dt'' dt' \langle v(t'' - t')v(0) \rangle \\
+    &= \lim_{t_1 \rightarrow \infty} \frac{1}{2t} \int_{0}^{t} dt' \int_{0}^{t} dt'' \langle v(t'')v(0) \rangle \\
+    &= \lim_{t \rightarrow \infty} \frac{1}{2t} \int_{-t}^{t} C(\tau) d \tau \int_{\max(- \tau,\tau)}^{\min(2t - \tau, 2t + \tau)} \frac{dv}{2}\\
+    &= \lim_{t \rightarrow \infty} \int_{0}^{t} C(\tau) (1 - |\frac{\tau}{t}|)d \tau \\
+    &= \int_{0}^{\infty} C(\tau) d \tau
+\end{align*}
+We lead this integration explecitely since it is rarely done in the literature, we used the following change of variable : 
+
+ $$ \tau = t'' - t' , \quad v = t'' + t'$$
+The final expression is only valid when $C(\tau)$ decays faster than $\frac{1}{\tau}$ otherwise we got a logarthmic growth of the integral over time, this one of the numerically challenging issue when we focus on long time decay of the VACF, since we need to push the integration further, and run longer simulation. In 2d simulations we might even not be able to integrate because of the logartmic growth of the integral. This way of calculation is commonly use but one should remember this integration subtility. With this latter  we now have three way of calculating the Diffusion coefficient, one can ask which one is the most reliable depending on the situation. M.P.Allen and D.J.Tidesley already discussed about it [CITE], and drew the following conclusions. For exponential decay of the \textbf{VCAF}, it might be more accurate to compute gradient of the \textbf{msd} rather than dividing it by the time. So we will generally prefer (\ref{eq:msd_grad}) than (\ref{eq:msd_diff}). Regarding the calculation of the diffusion constant using the autocorrelation integration, we just need to integrate over the whole time to not miss long-time contributions. 
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=1\linewidth]{figures/diffusion_calculation.pdf}
+    \end{center}
+    \caption{Diffusion coefficient over time using the prvious described methods}\label{fig:diffusion-calculation}
+\end{figure}
+
+\chapter{Metropolis Algorithm}
+Simple sampling
+
+
+Poor Performance for Localized or Sharp Features
+Wasteful Computation in Low-Contribution Regions
+Volume of the phase space scale exponentially with the dimension.
+
+\section*{Why the Convergence Rate is \( O(\frac{1}{\sqrt{N}}) \)}
+
+In Monte Carlo simulations, the estimation of an average quantity is done by sampling \( N \) independent configurations from the probability distribution of the system. The central concept underlying the convergence rate is the \textbf{law of large numbers} and the \textbf{central limit theorem}.
+
+\section*{Monte Carlo Estimator}
+
+Suppose we want to estimate the expected value \( \langle f \rangle \) of some function \( f(x) \), where \( x \) is a random variable distributed according to some probability distribution \( p(x) \). The Monte Carlo estimator for \( \langle f \rangle \) is:
+\[
+\langle f \rangle_N = \frac{1}{N} \sum_{i=1}^N f(x_i),
+\]
+where \( x_i \) are \( N \) independent samples drawn from \( p(x) \).
+
+\section*{Variance of the Estimator}
+
+The variance of the Monte Carlo estimator is given by:
+\[
+\text{Var}(\langle f \rangle_N) = \frac{\sigma^2}{N},
+\]
+where \( \sigma^2 \) is the variance of the function \( f(x) \) with respect to the probability distribution \( p(x) \):
+\[
+\sigma^2 = \langle f^2 \rangle - \langle f \rangle^2.
+\]
+
+\section*{Convergence Rate}
+
+According to the \textbf{central limit theorem}, as \( N \) increases, the distribution of \( \langle f \rangle_N \) approaches a normal distribution with mean \( \langle f \rangle \) and standard deviation \( \frac{\sigma}{\sqrt{N}} \). This implies that the error in our estimate, which is the standard deviation of the estimator, decreases as:
+\[
+\text{Error} \sim \frac{\sigma}{\sqrt{N}}.
+\]
+
+Hence, the \textbf{convergence rate} of the Monte Carlo simulation is \( \sqrt{N} \). This means that to reduce the error by a factor of 10, we need to increase the number of samples \( N \) by a factor of 100. This slow convergence rate is one of the limitations of simple Monte Carlo sampling.
+
+\section*{Implications}
+
+The \( \sqrt{N} \) convergence rate highlights why \textbf{Monte Carlo simulations} require a large number of samples to achieve high accuracy. This motivates the use of techniques like \textbf{importance sampling} and \textbf{variance reduction} to improve efficiency and obtain more accurate results with fewer samples.
+good sampling
+
+
+\section*{Importance Sampling in Monte Carlo Simulations}
+
+\textbf{Importance sampling} is a technique used in Monte Carlo simulations to improve the efficiency of sampling by reducing the variance of the estimator. The goal is to focus computational effort on regions of the state space that contribute most significantly to the quantity being estimated. In statistical physics, this method is crucial because the system often has many microstates with varying probabilities, and uniform sampling would be inefficient.
+
+\section*{Concept of Detailed Balance and Equilibrium}
+
+In statistical mechanics, \textbf{detailed balance} is a condition that ensures a system will reach and maintain equilibrium. It requires that, for any two states \( \nu \) and \( \mu \), the rate of transitions from \( \nu \) to \( \mu \) must equal the rate of transitions from \( \mu \) to \( \nu \) at equilibrium. Mathematically, this condition is written as:
+\[
+P(\nu) W(\nu \to \mu) = P(\mu) W(\mu \to \nu),
+\]
+where:
+\begin{itemize}
+    \item \( P(\nu) \) and \( P(\mu) \) are the equilibrium probabilities of states \( \nu \) and \( \mu \), respectively.
+    \item \( W(\nu \to \mu) \) and \( W(\mu \to \nu) \) are the transition probabilities from \( \nu \) to \( \mu \) and from \( \mu \) to \( \nu \), respectively.
+\end{itemize}
+
+\section*{Detailed Balance Using Flux of Random Walkers}
+
+To understand detailed balance in the context of \textbf{fluxes}, consider a collection of random walkers moving between states \( \nu \) and \( \mu \):
+\begin{itemize}
+    \item The \textbf{flux from \( \nu \) to \( \mu \)} is given by \( P(\nu) W(\nu \to \mu) \).
+    \item The \textbf{flux from \( \mu \) to \( \nu \)} is given by \( P(\mu) W(\mu \to \nu) \).
+\end{itemize}
+
+At equilibrium, the net flux between \( \nu \) and \( \mu \) must be zero, implying that the fluxes are equal. This ensures that the probability distribution remains unchanged over time, maintaining a steady state.
+
+\section*{Applying Detailed Balance to the Ising Model}
+
+Now, consider a simple Monte Carlo scheme for simulating the Ising model:
+\begin{enumerate}
+    \item Choose a random spin in the lattice.
+    \item Calculate the energy change \( \Delta E \) if the spin were to flip.
+    \item Use the following criteria to decide whether to flip the spin:
+    \begin{itemize}
+        \item \textbf{Accept the flip} if \( \Delta E \leq 0 \) (i.e., if the energy decreases or stays the same).
+        \item \textbf{Reject the flip} if \( \Delta E > 0 \) (i.e., if the energy increases).
+    \end{itemize}
+\end{enumerate}
+
+\section*{Does This Scheme Preserve the Flux and Detailed Balance?}
+
+\subsection*{1. Understanding the Transition Rates}
+
+\begin{itemize}
+    \item In the Ising model, the probability of transitioning from one configuration \( \nu \) to another \( \mu \) depends on the change in energy \( \Delta E \) associated with flipping a spin.
+    \item The scheme described only accepts moves that lower or leave the energy unchanged and rejects moves that increase energy. This introduces a \textbf{bias} in the sampling because it only allows energy-decreasing transitions, violating detailed balance.
+\end{itemize}
+
+\subsection*{2. Violation of Detailed Balance}
+
+Since the scheme does not allow upward energy fluctuations (where \( \Delta E > 0 \)), the condition:
+\[
+P(\nu) W(\nu \to \mu) = P(\mu) W(\mu \to \nu)
+\]
+is not satisfied for all transitions. Thermal fluctuations are crucial for the system to explore the entire configuration space properly. By rejecting all upward transitions, the system can get trapped in local energy minima, preventing correct sampling according to the Boltzmann distribution.
+
+\section*{Correcting the Scheme to Preserve Detailed Balance}
+
+To ensure that the Monte Carlo algorithm preserves detailed balance, transitions that increase energy must be allowed with appropriate probabilities. This is typically done using the \textbf{Metropolis algorithm}, where the acceptance criterion is:
+\begin{itemize}
+    \item Accept the spin flip if \( \Delta E \leq 0 \).
+    \item Accept the spin flip with probability \( \exp\left(-\frac{\Delta E}{k_B T}\right) \) if \( \Delta E > 0 \), where \( k_B \) is the Boltzmann constant and \( T \) is the temperature.
+\end{itemize}
+
+\section*{Why This Works}
+
+The Metropolis criterion ensures that the detailed balance condition is satisfied because:
+\[
+\frac{W(\nu \to \mu)}{W(\mu \to \nu)} = \frac{P(\mu)}{P(\nu)} = \exp\left(-\frac{\Delta E}{k_B T}\right),
+\]
+where \( \Delta E \) is the energy difference between states \( \nu \) and \( \mu \). This allows the system to transition both to higher and lower energy states, maintaining the equilibrium distribution.
+
+\section*{Conclusion}
+
+The proposed scheme (only accepting spin flips that lower energy) does \textbf{not preserve detailed balance} and would lead to biased sampling. Allowing transitions that increase energy with a probability given by the Boltzmann factor is essential to ensure that the system samples configurations according to the correct equilibrium distribution. This correction is crucial for accurately simulating systems like the Ising model, where fluctuations play a significant role.
+Importance of Ising Model
+explore the phase space with an importance sampling random walk. 
+
+CRTICAL SLOWING DOWN
+FInite size effect on first order and second order transition.
+
+dependancy of the free energy landacape opver the size (local minimum, interface ...)
+SECOND ORDER : the correlation length cannot diverge anymore and is limited by the system size, hence change the free energy landscape
+CHANGE CRITICAL EXPONENT exploit finite-size effects - don’t ignore them. and can extract
+
+FIRST ORDER : no divergence of the correlation length, metastable state and np discontinuity in the magnetization. The suceptibility is no more spiking for equilibrium state. (Have to discuss about metastable state). 
+
+
+\end{multicols} 
 \end{document}

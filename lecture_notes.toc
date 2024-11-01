@@ -17,9 +17,20 @@
 \contentsline {subsubsection}{\numberline {a)}Exact Propagator}{3}{subsubsection.2.2.1.1}%
 \contentsline {subsubsection}{\numberline {b)}Euler Algorithm \& Propagator}{4}{subsubsection.2.2.1.2}%
 \contentsline {subsubsection}{\numberline {c)}Verlet Algorithm \& Propagator}{4}{subsubsection.2.2.1.3}%
-\contentsline {chapter}{\numberline {3}Constant Temperature Dynamics}{4}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Constant Temperature Dynamics}{5}{chapter.3}%
 \contentsline {section}{\numberline {I}Different Ensembles}{5}{section.3.1}%
 \contentsline {subsection}{\numberline {A}Microcanonical Ensemble}{5}{subsection.3.1.1}%
 \contentsline {section}{\numberline {II}Canonical Ensemble}{5}{section.3.2}%
 \contentsline {section}{\numberline {III}Thermostats}{5}{section.3.3}%
-\contentsline {subsection}{\numberline {A}Langvin Thermostat}{5}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {A}Stochastic thermostat Thermostat}{6}{subsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {a)}Andersen Thermostat}{6}{subsubsection.3.3.1.1}%
+\contentsline {subsubsection}{\numberline {b)}Langevin Thermostat}{6}{subsubsection.3.3.1.2}%
+\contentsline {subsection}{\numberline {B}Detrministic Thermostat}{6}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {a)}Velocity Rescaling}{6}{subsubsection.3.3.2.1}%
+\contentsline {subsubsection}{\numberline {b)}Nose-Hoover Thermostat}{7}{subsubsection.3.3.2.2}%
+\contentsline {subsection}{\numberline {C}Comparing Thermostats}{7}{subsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {a)}Energy Distribution}{7}{subsubsection.3.3.3.1}%
+\contentsline {subsection}{\numberline {D}Calculating Transport Coefficients}{8}{subsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {a)}Long time tails}{8}{subsubsection.3.3.4.1}%
+\contentsline {subsubsection}{\numberline {b)}Calculation of Diffusion Constant}{8}{subsubsection.3.3.4.2}%
+\contentsline {chapter}{\numberline {4}Metropolis Algorithm}{9}{chapter.4}%

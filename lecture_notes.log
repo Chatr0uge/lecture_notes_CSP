@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.6.28)  7 OCT 2024 23:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.6.28)  1 NOV 2024 20:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1475,7 +1475,14 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
 LaTeX Warning: Unused global option(s):
     [ansiapaper].
 
-(./lecture_notes.aux)
+(./lecture_notes.aux
+
+LaTeX Warning: Label `eq:partition_canonical' multiply defined.
+
+
+LaTeX Warning: Label `eq:partition_canonical@cref' multiply defined.
+
+)
 \openout1 = `lecture_notes.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 168.
@@ -1591,34 +1598,34 @@ Package hyperref Info: Link coloring OFF on input line 168.
 \openout6 = `lecture_notes.out'.
 
 LaTeX Font Info:    Font shape `T1/cmbr/b/n' in size <9> not available
-(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 181.
+(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 177.
 LaTeX Font Info:    Font shape `T1/cmbr/b/n' in size <14.4> not available
-(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 181.
+(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 177.
 LaTeX Font Info:    Font shape `T1/cmbr/b/n' in size <12> not available
-(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 188.
-LaTeX Font Info:    Trying to load font information for OT1+cmbr on input line 188.
+(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 184.
+LaTeX Font Info:    Trying to load font information for OT1+cmbr on input line 184.
  (/usr/share/texlive/texmf-dist/tex/latex/cmbright/ot1cmbr.fd
 File: ot1cmbr.fd 2005/04/13 v8.1 (WaS)
 )
-LaTeX Font Info:    Trying to load font information for OML+cmbrm on input line 188.
+LaTeX Font Info:    Trying to load font information for OML+cmbrm on input line 184.
  (/usr/share/texlive/texmf-dist/tex/latex/cmbright/omlcmbrm.fd
 File: omlcmbrm.fd 2005/04/13 v8.1 (WaS)
 )
-LaTeX Font Info:    Trying to load font information for OMS+cmbrs on input line 188.
+LaTeX Font Info:    Trying to load font information for OMS+cmbrs on input line 184.
  (/usr/share/texlive/texmf-dist/tex/latex/cmbright/omscmbrs.fd
 File: omscmbrs.fd 2005/04/13 v8.1 (WaS)
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 188.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 184.
  (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 188.
+(Font)              <12> on input line 184.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 188.
+(Font)              <8> on input line 184.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 188.
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 188.
+(Font)              <6> on input line 184.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 184.
  (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd) (./lecture_notes.toc
 LaTeX Font Info:    Font shape `T1/cmbr/b/n' in size <8> not available
 (Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 2.
@@ -1639,6 +1646,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--7
  [][] [][]\T1/cmbr/m/n/8 Hamiltonian For- 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+ [][] [][]\T1/cmbr/m/n/8 Comparing Ther- 
+ []
+
+
+Underfull \hbox (badness 8170) in paragraph at lines 33--33
+ [][] [][]\T1/cmbr/m/n/8 Calculating Trans- 
+ []
+
 )
 \tf@toc=\write7
 \openout7 = `lecture_notes.toc'.
@@ -1646,38 +1663,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--7
 
 Chapter 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
 []\T1/cmbr/m/n/9 Additionally, com-pu-ta-tional ap-
  []
 
-<./figures/supercomputer_flops.pdf, id=129, 202.63266pt x 193.80568pt>
+<./figures/supercomputer_flops.pdf, id=149, 202.63266pt x 193.80568pt>
 File: ./figures/supercomputer_flops.pdf Graphic file (type pdf)
 <use ./figures/supercomputer_flops.pdf>
-Package pdftex.def Info: ./figures/supercomputer_flops.pdf  used on input line 218.
+Package pdftex.def Info: ./figures/supercomputer_flops.pdf  used on input line 214.
 (pdftex.def)             Requested size: 157.34375pt x 150.49356pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 224.
-Chapter 2.
+(Font)              <9> on input line 220.
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 1 might be wrong on input line 223.
+
 LaTeX Font Info:    Font shape `T1/cmbr/b/n' in size <10> not available
-(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 233.
+(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 223.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 233.
+(Font)              <10> on input line 223.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 233.
-<./figures/github.png, id=132, 2055.68pt x 2055.68pt>
+(Font)              <7> on input line 223.
+<./figures/github.png, id=152, 2055.68pt x 2055.68pt>
 File: ./figures/github.png Graphic file (type png)
 <use ./figures/github.png>
-Package pdftex.def Info: ./figures/github.png  used on input line 233.
+Package pdftex.def Info: ./figures/github.png  used on input line 223.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 
- <./figures/github.png> <./figures/supercomputer_flops.pdf>] (./figures/Phi_space_volume.pdf_tex
-<./figures/Phi_space_volume.pdf, id=205, page=1, 532.47743pt x 418.72505pt>
+ <./figures/github.png> <./figures/supercomputer_flops.pdf>]
+Chapter 2.
+(./figures/Phi_space_volume.pdf_tex
+<./figures/Phi_space_volume.pdf, id=230, page=1, 532.47743pt x 418.72505pt>
 File: ./figures/Phi_space_volume.pdf Graphic file (type pdf)
 <use ./figures/Phi_space_volume.pdf, page 1>
 Package pdftex.def Info: ./figures/Phi_space_volume.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 157.34375pt x 123.72726pt.
-<./figures/Phi_space_volume.pdf, id=206, page=2, 532.47743pt x 418.72505pt>
+<./figures/Phi_space_volume.pdf, id=231, page=2, 532.47743pt x 418.72505pt>
 File: ./figures/Phi_space_volume.pdf Graphic file (type pdf)
 <use ./figures/Phi_space_volume.pdf, page 2>
 Package pdftex.def Info: ./figures/Phi_space_volume.pdf , page2 used on input line 61.
@@ -1685,105 +1707,188 @@ Package pdftex.def Info: ./figures/Phi_space_volume.pdf , page2 used on input li
 )
 File: ./figures/github.png Graphic file (type png)
 <use ./figures/github.png>
-Package pdftex.def Info: ./figures/github.png  used on input line 344.
+Package pdftex.def Info: ./figures/github.png  used on input line 332.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
  [2{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc} <./figures/Phi_space_volume.pdf> <./figures/Phi_space_volume.pdf
 
 pdfTeX warning: pdflatex (file ./figures/Phi_space_volume.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
 LaTeX Font Info:    Font shape `T1/cmbr/m/it' in size <9> not available
-(Font)              Font shape `T1/cmbr/m/sl' tried instead on input line 366.
+(Font)              Font shape `T1/cmbr/m/sl' tried instead on input line 362.
 
-Overfull \hbox (2.05113pt too wide) detected at line 371
+Overfull \hbox (2.05113pt too wide) detected at line 367
  []$[][]\OT1/cmbr/m/n/9 (\OMS/cmbrs/m/n/9 f\OML/cmbrm/m/it/9 H[]\OMS/cmbrs/m/n/9 f\OML/cmbrm/m/it/9 H[]; H[]\OMS/cmbrs/m/n/9 gg ^^@ f\OML/cmbrm/m/it/9 H[]\OMS/cmbrs/m/n/9 f\OML/cmbrm/m/it/9 H[]; H[]\OMS/cmbrs/m/n/9 gg\OT1/cmbr/m/n/9 ) []  $ 
  []
 
 
-Overfull \hbox (8.12814pt too wide) detected at line 421
+Overfull \hbox (8.12814pt too wide) detected at line 417
 []
  []
 
 
-Underfull \hbox (badness 5050) in paragraph at lines 439--440
+Underfull \hbox (badness 5050) in paragraph at lines 435--436
 []\T1/cmbr/m/n/9 Considering the two \T1/cmbr/bx/n/9 or-thog-o-nal
  []
 
 File: ./figures/github.png Graphic file (type png)
 <use ./figures/github.png>
-Package pdftex.def Info: ./figures/github.png  used on input line 461.
+Package pdftex.def Info: ./figures/github.png  used on input line 457.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
 [3]
-
-LaTeX Warning: Reference `fig:HarmonicOscillator' on page 1 undefined on input line 489.
-
-
-Overfull \hbox (6.30675pt too wide) detected at line 503
+Overfull \hbox (6.30675pt too wide) detected at line 499
 []
  []
 
 
-Overfull \hbox (7.01321pt too wide) detected at line 529
+Overfull \hbox (7.01321pt too wide) detected at line 525
 []
  []
 
-<./figures/Velvet_euler.pdf, id=252, 109.72995pt x 109.03134pt>
+<./figures/Velvet_euler.pdf, id=276, 109.72995pt x 109.03134pt>
 File: ./figures/Velvet_euler.pdf Graphic file (type pdf)
 <use ./figures/Velvet_euler.pdf>
-Package pdftex.def Info: ./figures/Velvet_euler.pdf  used on input line 533.
+Package pdftex.def Info: ./figures/Velvet_euler.pdf  used on input line 529.
 (pdftex.def)             Requested size: 157.34375pt x 156.35616pt.
-Chapter 3.
+<./figures/HarmonicOscillator.pdf, id=277, 141.46852pt x 289.54233pt>
+File: ./figures/HarmonicOscillator.pdf Graphic file (type pdf)
+<use ./figures/HarmonicOscillator.pdf>
+Package pdftex.def Info: ./figures/HarmonicOscillator.pdf  used on input line 536.
+(pdftex.def)             Requested size: 157.34375pt x 322.06732pt.
 File: ./figures/github.png Graphic file (type png)
 <use ./figures/github.png>
-Package pdftex.def Info: ./figures/github.png  used on input line 542.
+Package pdftex.def Info: ./figures/github.png  used on input line 539.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
-[4 <./figures/Velvet_euler.pdf>] (./figures/Canonical_ensemble.pdf_tex
-<./figures/Canonical_ensemble.pdf, id=284, page=1, 218.13602pt x 119.58856pt>
+[4 <./figures/Velvet_euler.pdf>]
+Chapter 3.
+(./figures/Canonical_ensemble.pdf_tex
+<./figures/Canonical_ensemble.pdf, id=309, page=1, 218.13602pt x 119.58856pt>
 File: ./figures/Canonical_ensemble.pdf Graphic file (type pdf)
 <use ./figures/Canonical_ensemble.pdf, page 1>
 Package pdftex.def Info: ./figures/Canonical_ensemble.pdf , page1 used on input line 65.
 (pdftex.def)             Requested size: 157.34375pt x 86.26427pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 558--558
+Underfull \hbox (badness 10000) in paragraph at lines 560--560
 []\T1/cmbr/m/sl/8 Figure 3.1 \T1/cmbr/m/n/8 ^^U |Canon-i-cal en-sem-ble
- []
-
-
-Underfull \hbox (badness 7362) in paragraph at lines 575--576
-[]\T1/cmbr/m/n/9 The Langevin ther-mo-stat is a
  []
 
 File: ./figures/github.png Graphic file (type png)
 <use ./figures/github.png>
-Package pdftex.def Info: ./figures/github.png  used on input line 588.
+Package pdftex.def Info: ./figures/github.png  used on input line 603.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
-[5 <./figures/Canonical_ensemble.pdf>] (./lecture_notes.aux)
+[5 <./figures/HarmonicOscillator.pdf> <./figures/Canonical_ensemble.pdf>]
+Underfull \hbox (badness 7362) in paragraph at lines 608--609
+[]\T1/cmbr/m/n/9 The Langevin ther-mo-stat is a
+ []
+
+
+Overfull \hbox (4.12976pt too wide) detected at line 619
+\OML/cmbrm/m/it/9 x\OT1/cmbr/m/n/9 (\OML/cmbrm/m/it/9 t\OT1/cmbr/m/n/9 ) = \OML/cmbrm/m/it/9 x[]e[] \OT1/cmbr/m/n/9 + \OML/cmbrm/m/it/9 ^^\[] [][] e[]f\OT1/cmbr/m/n/9 (\OML/cmbrm/m/it/9 t[]\OT1/cmbr/m/n/9 )\OML/cmbrm/m/it/9 dt[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 657--658
+[]\T1/cmbr/m/n/9 Studying the stochas-tics ther-
+ []
+
+File: ./figures/github.png Graphic file (type png)
+<use ./figures/github.png>
+Package pdftex.def Info: ./figures/github.png  used on input line 680.
+(pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
+[6]
+<./figures/NoseHooverChain.png, id=344, 1135.24126pt x 856.19875pt>
+File: ./figures/NoseHooverChain.png Graphic file (type png)
+<use ./figures/NoseHooverChain.png>
+Package pdftex.def Info: ./figures/NoseHooverChain.png  used on input line 699.
+(pdftex.def)             Requested size: 157.34375pt x 118.66507pt.
+<figures/MD_energy_temperature.pdf, id=346, 243.62418pt x 142.46803pt>
+File: figures/MD_energy_temperature.pdf Graphic file (type pdf)
+<use figures/MD_energy_temperature.pdf>
+Package pdftex.def Info: figures/MD_energy_temperature.pdf  used on input line 710.
+(pdftex.def)             Requested size: 157.34375pt x 92.01617pt.
+<figures/thermostats_PDF.pdf, id=348, 248.36742pt x 429.04242pt>
+File: figures/thermostats_PDF.pdf Graphic file (type pdf)
+<use figures/thermostats_PDF.pdf>
+Package pdftex.def Info: figures/thermostats_PDF.pdf  used on input line 717.
+(pdftex.def)             Requested size: 157.34375pt x 271.81042pt.
+File: ./figures/github.png Graphic file (type png)
+<use ./figures/github.png>
+Package pdftex.def Info: ./figures/github.png  used on input line 727.
+(pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
+ [7 <./figures/NoseHooverChain.png> <./figures/MD_energy_temperature.pdf> <./figures/thermostats_PDF.pdf>] (./decay_schema.pdf_tex
+<decay_schema.pdf, id=424, page=1, 286.24757pt x 103.23837pt>
+File: decay_schema.pdf Graphic file (type pdf)
+<use decay_schema.pdf, page 1>
+Package pdftex.def Info: decay_schema.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 157.34375pt x 56.74977pt.
+)
+<figures/velocity_autocorrelation.pdf, id=425, 248.36742pt x 284.50241pt>
+File: figures/velocity_autocorrelation.pdf Graphic file (type pdf)
+<use figures/velocity_autocorrelation.pdf>
+Package pdftex.def Info: figures/velocity_autocorrelation.pdf  used on input line 751.
+(pdftex.def)             Requested size: 157.34375pt x 180.24025pt.
+<figures/velocity_autocorrelation_density.pdf, id=426, 238.04648pt x 143.80138pt>
+File: figures/velocity_autocorrelation_density.pdf Graphic file (type pdf)
+<use figures/velocity_autocorrelation_density.pdf>
+Package pdftex.def Info: figures/velocity_autocorrelation_density.pdf  used on input line 769.
+(pdftex.def)             Requested size: 157.34375pt x 95.054pt.
+
+Overfull \hbox (12.11732pt too wide) detected at line 784
+[]
+ []
+
+File: ./figures/github.png Graphic file (type png)
+<use ./figures/github.png>
+Package pdftex.def Info: ./figures/github.png  used on input line 784.
+(pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
+[8 <./decay_schema.pdf> <./figures/velocity_autocorrelation.pdf> <./figures/velocity_autocorrelation_density.pdf>]
+<figures/diffusion_calculation.pdf, id=494, 240.4576pt x 142.46803pt>
+File: figures/diffusion_calculation.pdf Graphic file (type pdf)
+<use figures/diffusion_calculation.pdf>
+Package pdftex.def Info: figures/diffusion_calculation.pdf  used on input line 792.
+(pdftex.def)             Requested size: 157.34375pt x 93.22485pt.
+
+Chapter 4.
+LaTeX Font Info:    Trying to load font information for TS1+cmbr on input line 855.
+(/usr/share/texlive/texmf-dist/tex/latex/cmbright/ts1cmbr.fd
+File: ts1cmbr.fd 2005/04/13 v8.1 (WaS)
+)
+File: ./figures/github.png Graphic file (type png)
+<use ./figures/github.png>
+Package pdftex.def Info: ./figures/github.png  used on input line 873.
+(pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
+ [9{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./figures/diffusion_calculation.pdf>]
+File: ./figures/github.png Graphic file (type png)
+<use ./figures/github.png>
+Package pdftex.def Info: ./figures/github.png  used on input line 932.
+(pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
+ [10] (./lecture_notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `lecture_notes.out' has not changed.
-(rerunfilecheck)             Checksum: 0F5057CE8783AA4B894A489EA46DD082;2872.
+(rerunfilecheck)             Checksum: C6DC2213DF2675CB029E3BA8C1259644;3680.
 Package logreq Info: Writing requests to 'lecture_notes.run.xml'.
 \openout1 = `lecture_notes.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 60295 strings out of 474222
- 1399887 string characters out of 5748733
- 2450965 words of memory out of 5000000
- 81593 multiletter control sequences out of 15000+600000
- 583502 words of font info for 101 fonts, out of 8000000 for 9000
+ 60476 strings out of 474222
+ 1404668 string characters out of 5748733
+ 2453470 words of memory out of 5000000
+ 81729 multiletter control sequences out of 15000+600000
+ 583847 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,19n,93p,1158b,2039s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbbx10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmo8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmo9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmr10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmr8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmr9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbsr8.pfb>
-Output written on lecture_notes.pdf (5 pages, 376604 bytes).
+ 94i,19n,93p,1207b,2039s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbbx10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmo8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmo9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmr10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmr8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmr9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbsr8.pfb>
+Output written on lecture_notes.pdf (10 pages, 4914630 bytes).
 PDF statistics:
- 370 PDF objects out of 1000 (max. 8388607)
- 244 compressed objects within 3 object streams
- 40 named destinations out of 1000 (max. 500000)
- 323 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 623 PDF objects out of 1000 (max. 8388607)
+ 458 compressed objects within 5 object streams
+ 77 named destinations out of 1000 (max. 500000)
+ 395 words of extra memory for PDF output out of 10000 (max. 10000000)
 
