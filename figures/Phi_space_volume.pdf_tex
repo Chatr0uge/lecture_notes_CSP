@@ -31,7 +31,7 @@
     \renewcommand\color[2][]{}%
   }%
   \providecommand\transparent[1]{%
-    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}
     \renewcommand\transparent[1]{}%
   }%
   \providecommand\rotatebox[2]{#2}%
@@ -54,7 +54,8 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{./figures/Phi_space_volume.pdf}}%
-    \put(0.52499858,0.75239474){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\large{$\Phi$ space}\end{tabular}}}}%
+\put(0.52499858,0.75239474){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}
+ $\Phi$ space \end{tabular}}}}%
     \put(0.61376923,0.45217282){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\textcolor{red}{$V_2$}\end{tabular}}}}%
     \put(0.30609802,0.03561891){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$V_1$\end{tabular}}}}%
     \put(0.91141985,0.23261564){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}$\textbf{z}(t)$\end{tabular}}}}%

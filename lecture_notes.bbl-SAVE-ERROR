@@ -16,5 +16,329 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{MD_theo}{book}{}
+      \name{author}{2}{}{%
+        {{hash=b5ffeba7d86ad6809db3c9d1d850227e}{%
+           family={Leimkuhler},
+           familyi={L\bibinitperiod},
+           given={Benedict},
+           giveni={B\bibinitperiod}}}%
+        {{hash=998afc71edbf0e2d386bdfa628e1e7cc}{%
+           family={Matthews},
+           familyi={M\bibinitperiod},
+           given={Charles},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{3118ce602d2dcf935457d2ec0a8275c4}
+      \strng{fullhash}{3118ce602d2dcf935457d2ec0a8275c4}
+      \strng{bibnamehash}{3118ce602d2dcf935457d2ec0a8275c4}
+      \strng{authorbibnamehash}{3118ce602d2dcf935457d2ec0a8275c4}
+      \strng{authornamehash}{3118ce602d2dcf935457d2ec0a8275c4}
+      \strng{authorfullhash}{3118ce602d2dcf935457d2ec0a8275c4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-319-16374-1}
+      \field{month}{5}
+      \field{series}{Interdisciplinary Applied Mathematics}
+      \field{title}{Molecular Dynamics: With Deterministic and Stochastic Numerical Methods}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1007/978-3-319-16375-8
+      \endverb
+    \endentry
+    \entry{Susceptibility}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=fbf05952c5d2f94591917011419a2359}{%
+           family={Cai},
+           familyi={C\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{fbf05952c5d2f94591917011419a2359}
+      \strng{fullhash}{fbf05952c5d2f94591917011419a2359}
+      \strng{bibnamehash}{fbf05952c5d2f94591917011419a2359}
+      \strng{authorbibnamehash}{fbf05952c5d2f94591917011419a2359}
+      \strng{authornamehash}{fbf05952c5d2f94591917011419a2359}
+      \strng{authorfullhash}{fbf05952c5d2f94591917011419a2359}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ME346A Introduction to Statistical Mechanics}
+      \field{year}{2011}
+    \endentry
+    \entry{Landau}{book}{}
+      \name{author}{2}{}{%
+        {{hash=d5daecd72a3dbc9327e9d9d904cdba0b}{%
+           family={Landau},
+           familyi={L\bibinitperiod},
+           given={David\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=fe6a6e727465ea47cf641e5f5e0f82f8}{%
+           family={Binder},
+           familyi={B\bibinitperiod},
+           given={Kurt},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{37cc3a850fe7a29a6595869bbbf19d7f}
+      \strng{fullhash}{37cc3a850fe7a29a6595869bbbf19d7f}
+      \strng{bibnamehash}{37cc3a850fe7a29a6595869bbbf19d7f}
+      \strng{authorbibnamehash}{37cc3a850fe7a29a6595869bbbf19d7f}
+      \strng{authornamehash}{37cc3a850fe7a29a6595869bbbf19d7f}
+      \strng{authorfullhash}{37cc3a850fe7a29a6595869bbbf19d7f}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4}
+      \field{title}{A Guide to Monte Carlo Simulations in Statistical Physics}
+      \field{year}{2014}
+    \endentry
+    \entry{power}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2255d83c00ab843004872e78cba117ce}{%
+           family={Stanley},
+           familyi={S\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{2255d83c00ab843004872e78cba117ce}
+      \strng{fullhash}{2255d83c00ab843004872e78cba117ce}
+      \strng{bibnamehash}{2255d83c00ab843004872e78cba117ce}
+      \strng{authorbibnamehash}{2255d83c00ab843004872e78cba117ce}
+      \strng{authornamehash}{2255d83c00ab843004872e78cba117ce}
+      \strng{authorfullhash}{2255d83c00ab843004872e78cba117ce}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-4612-7174-1}
+      \field{journaltitle}{Rev. Mod. Phys.}
+      \field{month}{03}
+      \field{title}{Scaling, Universality and Renormalization: Three Pillars of Modern Critical Phenomena}
+      \field{volume}{71}
+      \field{year}{1999}
+      \field{pages}{S358}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1103/RevModPhys.71.S358
+      \endverb
+    \endentry
+    \entry{PhysRevE.52.1399}{article}{}
+      \name{author}{3}{}{%
+        {{hash=1da679988f7d3d7bacd8878bb45304c4}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Zhong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=2785dd2e8e6e8c78d7b6e71c605cd7d6}{%
+           family={Jinxiu},
+           familyi={J\bibinitperiod},
+           given={Zhang},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=278aadfedc31f82c5559489102e63291}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Liu},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{f5cc437a307d287f679ca449c103b4da}
+      \strng{fullhash}{f4ef97c64579e1ad424e3fd1c24cf74e}
+      \strng{bibnamehash}{f4ef97c64579e1ad424e3fd1c24cf74e}
+      \strng{authorbibnamehash}{f4ef97c64579e1ad424e3fd1c24cf74e}
+      \strng{authornamehash}{f5cc437a307d287f679ca449c103b4da}
+      \strng{authorfullhash}{f4ef97c64579e1ad424e3fd1c24cf74e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{2}
+      \field{journaltitle}{Phys. Rev. E}
+      \field{month}{8}
+      \field{title}{Scaling of hysteresis in the Ising model and cell-dynamical systems in a linearly varying external field}
+      \field{volume}{52}
+      \field{year}{1995}
+      \field{pages}{1399\bibrangedash 1402}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1103/PhysRevE.52.1399
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevE.52.1399
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevE.52.1399
+      \endverb
+    \endentry
+    \entry{POMEAU}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1a06ee068773799095293ca3d2274956}{%
+           family={Pomeau},
+           familyi={P\bibinitperiod},
+           given={Y},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=6568337d1d5113110ac8539564c727eb}{%
+           family={Résibois},
+           familyi={R\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc007299ea700f87e7f76937de877360}
+      \strng{fullhash}{fc007299ea700f87e7f76937de877360}
+      \strng{bibnamehash}{fc007299ea700f87e7f76937de877360}
+      \strng{authorbibnamehash}{fc007299ea700f87e7f76937de877360}
+      \strng{authornamehash}{fc007299ea700f87e7f76937de877360}
+      \strng{authorfullhash}{fc007299ea700f87e7f76937de877360}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We critically discuss the various tools and methods which are used to describe the role of long wave length hydrodynamical processes in the analysis of time-dependent correlation functions. We also review the various physical problems (long time behavior of Green-Kubo integrands, 2 dimensional hydrodynamics, transport properties of the Van der Waals fluid, critical phenomena …) where these methods have received fruitful applications.}
+      \field{issn}{0370-1573}
+      \field{journaltitle}{Physics Reports}
+      \field{number}{2}
+      \field{title}{Time dependent correlation functions and mode-mode coupling theories}
+      \field{volume}{19}
+      \field{year}{1975}
+      \true{nocite}
+      \field{pages}{63\bibrangedash 139}
+      \range{pages}{77}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0370-1573(75)90019-8
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0370157375900198
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0370157375900198
+      \endverb
+    \endentry
+    \entry{Correlation}{book}{}
+      \name{author}{2}{}{%
+        {{hash=e73ce85b6ae336bbe26cae16a6933a0a}{%
+           family={Allen},
+           familyi={A\bibinitperiod},
+           given={Michael\bibnamedelima P.},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=ab3a1db3dbb265efade39f6ef37fa88c}{%
+           family={Tildesley},
+           familyi={T\bibinitperiod},
+           given={Dominic\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{5b8830545e1be1d1b7d074817a858cd7}
+      \strng{fullhash}{5b8830545e1be1d1b7d074817a858cd7}
+      \strng{bibnamehash}{5b8830545e1be1d1b7d074817a858cd7}
+      \strng{authorbibnamehash}{5b8830545e1be1d1b7d074817a858cd7}
+      \strng{authornamehash}{5b8830545e1be1d1b7d074817a858cd7}
+      \strng{authorfullhash}{5b8830545e1be1d1b7d074817a858cd7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{This book provides a practical guide to molecular dynamics and Monte Carlo simulation techniques used in the modelling of simple and complex liquids. Computer simulation is an essential tool in studying the chemistry and physics of condensed matter, complementing and reinforcing both experiment and theory. Simulations provide detailed information about structure and dynamics, essential to understand the many fluid systems that play a key role in our daily lives: polymers, gels, colloidal suspensions, liquid crystals, biological membranes, and glasses. The second edition of this pioneering book aims to explain how simulation programs work, how to use them, and how to interpret the results, with examples of the latest research in this rapidly evolving field. Accompanying programs in Fortran and Python provide practical, hands-on, illustrations of the ideas in the text.}}
+      \field{isbn}{9780198803195}
+      \field{month}{06}
+      \field{title}{{Computer Simulation of Liquids}}
+      \field{year}{2017}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1093/oso/9780198803195.001.0001
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/oso/9780198803195.001.0001
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/oso/9780198803195.001.0001
+      \endverb
+    \endentry
+    \entry{density}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c35d74b443b8b1425451356134e6f5b1}{%
+           family={Ghosh},
+           familyi={G\bibinitperiod},
+           given={Kanka},
+           giveni={K\bibinitperiod}}}%
+        {{hash=effd72e96cc55b6d6c1106199e6b8f4b}{%
+           family={Krishnamurthy},
+           familyi={K\bibinitperiod},
+           given={C.\bibnamedelimi V.},
+           giveni={C\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society (APS)}%
+      }
+      \strng{namehash}{099b67ed20dcffca5abece183ce1e80a}
+      \strng{fullhash}{099b67ed20dcffca5abece183ce1e80a}
+      \strng{bibnamehash}{099b67ed20dcffca5abece183ce1e80a}
+      \strng{authorbibnamehash}{099b67ed20dcffca5abece183ce1e80a}
+      \strng{authornamehash}{099b67ed20dcffca5abece183ce1e80a}
+      \strng{authorfullhash}{099b67ed20dcffca5abece183ce1e80a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2470-0053}
+      \field{journaltitle}{Physical Review E}
+      \field{month}{11}
+      \field{number}{5}
+      \field{title}{Molecular dynamics of partially confined Lennard-Jones gases: Velocity autocorrelation function, mean squared displacement, and collective excitations}
+      \field{volume}{98}
+      \field{year}{2018}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.1103/physreve.98.052115
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1103/PhysRevE.98.052115
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1103/PhysRevE.98.052115
+      \endverb
+    \endentry
+    \entry{L3}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ab88212fbec1aca33d991c01e3dbbecf}{%
+           family={Lydéric\bibnamedelima Bocquet},
+           familyi={L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Marco\bibnamedelima Biroli},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab88212fbec1aca33d991c01e3dbbecf}
+      \strng{fullhash}{ab88212fbec1aca33d991c01e3dbbecf}
+      \strng{bibnamehash}{ab88212fbec1aca33d991c01e3dbbecf}
+      \strng{authorbibnamehash}{ab88212fbec1aca33d991c01e3dbbecf}
+      \strng{authornamehash}{ab88212fbec1aca33d991c01e3dbbecf}
+      \strng{authorfullhash}{ab88212fbec1aca33d991c01e3dbbecf}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lecture notes on Statistical Physics}
+      \field{year}{2023}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

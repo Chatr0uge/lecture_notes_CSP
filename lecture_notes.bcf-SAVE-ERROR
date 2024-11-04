@@ -96,7 +96,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxbibnames</bcf:key>
-      <bcf:value>999</bcf:value>
+      <bcf:value>5</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxcitenames</bcf:key>
@@ -104,7 +104,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxsortnames</bcf:key>
-      <bcf:value>999</bcf:value>
+      <bcf:value>5</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxitems</bcf:key>
@@ -204,7 +204,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>useprefix</bcf:key>
-      <bcf:value>0</bcf:value>
+      <bcf:value>1</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>useafterword</bcf:key>
@@ -331,7 +331,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxbibnames</bcf:key>
-      <bcf:value>999</bcf:value>
+      <bcf:value>5</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxcitenames</bcf:key>
@@ -339,7 +339,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxsortnames</bcf:key>
-      <bcf:value>999</bcf:value>
+      <bcf:value>5</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>maxitems</bcf:key>
@@ -419,7 +419,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>useprefix</bcf:key>
-      <bcf:value>0</bcf:value>
+      <bcf:value>1</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>useafterword</bcf:key>
@@ -643,9 +643,7 @@
     <bcf:option datatype="boolean">related</bcf:option>
     <bcf:option datatype="boolean">subentry</bcf:option>
     <bcf:option datatype="boolean">articletitle</bcf:option>
-    <bcf:option datatype="boolean">chaptertitle</bcf:option>
-    <bcf:option datatype="boolean">pageranges</bcf:option>
-    <bcf:option datatype="boolean">biblabel</bcf:option>
+    <bcf:option datatype="boolean">intitle</bcf:option>
     <bcf:option datatype="boolean">subentrycomp</bcf:option>
     <bcf:option datatype="boolean">bibtexcaseprotection</bcf:option>
     <bcf:option datatype="integer">mincrossrefs</bcf:option>
@@ -1347,7 +1345,6 @@
       <bcf:field fieldtype="field" format="xsv" datatype="option" skip_output="true">relatedoptions</bcf:field>
       <bcf:field fieldtype="field" datatype="range">pages</bcf:field>
       <bcf:field fieldtype="field" datatype="code">execute</bcf:field>
-      <bcf:field fieldtype="field" datatype="literal">collaboration</bcf:field>
     </bcf:fields>
     <bcf:entryfields>
       <bcf:field>abstract</bcf:field>
@@ -2369,3 +2366,28 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bibliography.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1" intorder="1">MD_theo</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">MD_theo</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">MD_theo</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">Correlation</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">Correlation</bcf:citekey>
+    <bcf:citekey order="5" intorder="2">MD_theo</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">MD_theo</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">POMEAU</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">density</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">Correlation</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">Susceptibility</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">Landau</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">power</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">Landau</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">Landau</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">Susceptibility</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">Landau</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">Landau</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">PhysRevE.52.1399</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">PhysRevE.52.1399</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">PhysRevE.52.1399</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">Landau</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">Landau</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">Landau</bcf:citekey>
+    <bcf:citekey order="24" intorder="1" nocite="1">*</bcf:citekey>

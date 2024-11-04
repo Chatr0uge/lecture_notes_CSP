@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.6.28)  1 NOV 2024 20:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.6.28)  4 NOV 2024 21:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -989,10 +989,7 @@ Package biblatex Info: ... file 'blx-dm.def' found.
 File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'phys.dbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex-phys/phys.dbx
-File: phys.dbx 2019/12/03 v1.1b biblatex database model extension
-)
+Package biblatex Info: ... file 'nature.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@afterword=\count444
@@ -1100,10 +1097,10 @@ File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 \biburllcskip=\muskip21
 \c@smartand=\count520
 )
-Package biblatex Info: Trying to load bibliography style 'phys'...
-Package biblatex Info: ... file 'phys.bbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex-phys/phys.bbx
-File: phys.bbx 2019/12/03 v1.1b biblatex bibliography style
+Package biblatex Info: Trying to load bibliography style 'nature'...
+Package biblatex Info: ... file 'nature.bbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex-nature/nature.bbx
+File: nature.bbx 2020/12/30 v1.3d biblatex bibliography style
 Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.bbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric-comp.bbx
@@ -1119,10 +1116,10 @@ File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count521
 \c@bbx:relatedtotal=\count522
 ))))
-Package biblatex Info: Trying to load citation style 'phys'...
-Package biblatex Info: ... file 'phys.cbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex-phys/phys.cbx
-File: phys.cbx 2019/12/03 v1.1b biblatex citation style
+Package biblatex Info: Trying to load citation style 'nature'...
+Package biblatex Info: ... file 'nature.cbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex-nature/nature.cbx
+File: nature.cbx 2020/12/30 v1.3d biblatex citation style
 Package biblatex Info: Trying to load citation style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.cbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
@@ -1208,8 +1205,7 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
 ) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
 Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
-
-(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \collectedbox=\box138
 )
@@ -1218,7 +1214,8 @@ Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \tc@urx=\dimen386
 \tc@ury=\dimen387
 Package trimclip Info: Using driver 'tc-pdftex.def'.
- (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen388
@@ -1359,22 +1356,6 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip96
-) (/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty
-Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
-Package cleveref Info: `hyperref' support loaded on input line 2370.
-LaTeX Info: Redefining \cref on input line 2370.
-LaTeX Info: Redefining \Cref on input line 2370.
-LaTeX Info: Redefining \crefrange on input line 2370.
-LaTeX Info: Redefining \Crefrange on input line 2370.
-LaTeX Info: Redefining \cpageref on input line 2370.
-LaTeX Info: Redefining \Cpageref on input line 2370.
-LaTeX Info: Redefining \cpagerefrange on input line 2370.
-LaTeX Info: Redefining \Cpagerefrange on input line 2370.
-LaTeX Info: Redefining \labelcref on input line 2370.
-LaTeX Info: Redefining \labelcpageref on input line 2370.
-Package cleveref Info: `listings' support loaded on input line 3131.
-Package cleveref Info: always capitalise cross-reference names on input line 7825.
-Package cleveref Info: always capitalise cross-reference names on input line 7852.
 ) (/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@@pps=\count549
@@ -1451,21 +1432,10 @@ LaTeX Info: Redefining \LaTeXe on input line 139.
 LaTeX Font Info:    Trying to load font information for T1+cmbr on input line 144.
  (/usr/share/texlive/texmf-dist/tex/latex/cmbright/t1cmbr.fd
 File: t1cmbr.fd 2005/04/13 v8.1 (WaS)
-)) (/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box143
-\UL@hyphenbox=\box144
-\UL@skip=\skip97
-\UL@hook=\toks64
-\UL@height=\dimen422
-\UL@pe=\count552
-\UL@pixel=\dimen423
-\ULC@box=\box145
-Package: ulem 2019/11/18
-\ULdepth=\dimen424
-)
-Package hyperref Info: Option `colorlinks' set `false' on input line 121.
+))
+Package hyperref Info: Option `colorlinks' set `false' on input line 119.
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex))
-\tabcont=\skip98
+\tabcont=\skip97
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
@@ -1477,49 +1447,46 @@ LaTeX Warning: Unused global option(s):
 
 (./lecture_notes.aux
 
-LaTeX Warning: Label `eq:partition_canonical' multiply defined.
-
-
-LaTeX Warning: Label `eq:partition_canonical@cref' multiply defined.
+LaTeX Warning: Label `eq:Thermodynamic_integration' multiply defined.
 
 )
 \openout1 = `lecture_notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for LY/yfrak/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for LYG/ygoth/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 168.
-LaTeX Font Info:    ... okay on input line 168.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for LY/yfrak/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for LYG/ygoth/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 166.
+LaTeX Font Info:    ... okay on input line 166.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count553
-\scratchdimen=\dimen425
-\scratchbox=\box146
-\nofMPsegments=\count554
-\nofMParguments=\count555
-\everyMPshowfont=\toks65
-\MPscratchCnt=\count556
-\MPscratchDim=\dimen426
-\MPnumerator=\count557
-\makeMPintoPDFobject=\count558
-\everyMPtoPDFconversion=\toks66
+\scratchcounter=\count552
+\scratchdimen=\dimen422
+\scratchbox=\box143
+\nofMPsegments=\count553
+\nofMParguments=\count554
+\everyMPshowfont=\toks64
+\MPscratchCnt=\count555
+\MPscratchDim=\dimen423
+\MPnumerator=\count556
+\makeMPintoPDFobject=\count557
+\everyMPtoPDFconversion=\toks65
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1528,7 +1495,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into your preamble.
- on input line 168.
+ on input line 166.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1564,18 +1531,18 @@ Package pgfplots Warning: running in backwards compatibility mode (unsuitable ti
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count559
+\c@lstlisting=\count558
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c__nicematrix_shift_Ldots_last_row_dim=\dimen427
-\c__nicematrix_shift_exterior_Vdots_dim=\dimen428
-\c__nicematrix_innersep_middle_dim=\dimen429
-\c@tabularnotesi=\count560
-\enitdp@tabularnotes=\count561
-\c@tabularnotes*i=\count562
-\enitdp@tabularnotes*=\count563
+\c__nicematrix_shift_Ldots_last_row_dim=\dimen424
+\c__nicematrix_shift_exterior_Vdots_dim=\dimen425
+\c__nicematrix_innersep_middle_dim=\dimen426
+\c@tabularnotesi=\count559
+\enitdp@tabularnotes=\count560
+\c@tabularnotes*i=\count561
+\enitdp@tabularnotes*=\count562
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
@@ -1587,20 +1554,19 @@ Package biblatex Info: Automatic encoding selection.
 \openout5 = `lecture_notes.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'lecture_notes.bbl' not found.
-
-No file lecture_notes.bbl.
-Package biblatex Info: Reference section=0 on input line 168.
-Package biblatex Info: Reference segment=0 on input line 168.
-Package hyperref Info: Link coloring OFF on input line 168.
-(./lecture_notes.out) (./lecture_notes.out)
+Package biblatex Info: ... file 'lecture_notes.bbl' found.
+ (./lecture_notes.bbl)
+Package biblatex Info: Reference section=0 on input line 166.
+Package biblatex Info: Reference segment=0 on input line 166.
+Package hyperref Info: Link coloring OFF on input line 166.
+ (./lecture_notes.out) (./lecture_notes.out)
 \@outlinefile=\write6
 \openout6 = `lecture_notes.out'.
 
 LaTeX Font Info:    Font shape `T1/cmbr/b/n' in size <9> not available
-(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 177.
+(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 175.
 LaTeX Font Info:    Font shape `T1/cmbr/b/n' in size <14.4> not available
-(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 177.
+(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 175.
 LaTeX Font Info:    Font shape `T1/cmbr/b/n' in size <12> not available
 (Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 184.
 LaTeX Font Info:    Trying to load font information for OT1+cmbr on input line 184.
@@ -1656,6 +1622,16 @@ Underfull \hbox (badness 8170) in paragraph at lines 33--33
  [][] [][]\T1/cmbr/m/n/8 Calculating Trans- 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+ [][] [][]\T1/cmbr/m/n/8 Importance Sam-pling in 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+ [][] [][]\T1/cmbr/m/n/8 Theoritical Back- 
+ []
+
 )
 \tf@toc=\write7
 \openout7 = `lecture_notes.toc'.
@@ -1667,47 +1643,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 208--209
 []\T1/cmbr/m/n/9 Additionally, com-pu-ta-tional ap-
  []
 
-<./figures/supercomputer_flops.pdf, id=149, 202.63266pt x 193.80568pt>
+<./figures/supercomputer_flops.pdf, id=199, 202.63266pt x 193.80568pt>
 File: ./figures/supercomputer_flops.pdf Graphic file (type pdf)
 <use ./figures/supercomputer_flops.pdf>
 Package pdftex.def Info: ./figures/supercomputer_flops.pdf  used on input line 214.
 (pdftex.def)             Requested size: 157.34375pt x 150.49356pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 220.
-
-Package multicol Warning: I moved some lines to the next page.
-(multicol)                Footnotes on page 1 might be wrong on input line 223.
-
 LaTeX Font Info:    Font shape `T1/cmbr/b/n' in size <10> not available
-(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 223.
+(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 222.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 223.
+(Font)              <10> on input line 222.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 223.
-<./figures/github.png, id=152, 2055.68pt x 2055.68pt>
+(Font)              <7> on input line 222.
+<./figures/github.png, id=202, 2055.68pt x 2055.68pt>
 File: ./figures/github.png Graphic file (type png)
 <use ./figures/github.png>
-Package pdftex.def Info: ./figures/github.png  used on input line 223.
+Package pdftex.def Info: ./figures/github.png  used on input line 222.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 
  <./figures/github.png> <./figures/supercomputer_flops.pdf>]
 Chapter 2.
 (./figures/Phi_space_volume.pdf_tex
-<./figures/Phi_space_volume.pdf, id=230, page=1, 532.47743pt x 418.72505pt>
+<./figures/Phi_space_volume.pdf, id=284, page=1, 532.47743pt x 418.72505pt>
 File: ./figures/Phi_space_volume.pdf Graphic file (type pdf)
 <use ./figures/Phi_space_volume.pdf, page 1>
 Package pdftex.def Info: ./figures/Phi_space_volume.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 157.34375pt x 123.72726pt.
-<./figures/Phi_space_volume.pdf, id=231, page=2, 532.47743pt x 418.72505pt>
+<./figures/Phi_space_volume.pdf, id=285, page=2, 532.47743pt x 418.72505pt>
 File: ./figures/Phi_space_volume.pdf Graphic file (type pdf)
 <use ./figures/Phi_space_volume.pdf, page 2>
-Package pdftex.def Info: ./figures/Phi_space_volume.pdf , page2 used on input line 61.
+Package pdftex.def Info: ./figures/Phi_space_volume.pdf , page2 used on input line 62.
 (pdftex.def)             Requested size: 157.34375pt x 123.72726pt.
 )
 File: ./figures/github.png Graphic file (type png)
 <use ./figures/github.png>
-Package pdftex.def Info: ./figures/github.png  used on input line 332.
+Package pdftex.def Info: ./figures/github.png  used on input line 316.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
  [2{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc} <./figures/Phi_space_volume.pdf> <./figures/Phi_space_volume.pdf
 
@@ -1716,152 +1688,262 @@ pdfTeX warning: pdflatex (file ./figures/Phi_space_volume.pdf): PDF inclusion: m
 LaTeX Font Info:    Font shape `T1/cmbr/m/it' in size <9> not available
 (Font)              Font shape `T1/cmbr/m/sl' tried instead on input line 362.
 
-Overfull \hbox (2.05113pt too wide) detected at line 367
- []$[][]\OT1/cmbr/m/n/9 (\OMS/cmbrs/m/n/9 f\OML/cmbrm/m/it/9 H[]\OMS/cmbrs/m/n/9 f\OML/cmbrm/m/it/9 H[]; H[]\OMS/cmbrs/m/n/9 gg ^^@ f\OML/cmbrm/m/it/9 H[]\OMS/cmbrs/m/n/9 f\OML/cmbrm/m/it/9 H[]; H[]\OMS/cmbrs/m/n/9 gg\OT1/cmbr/m/n/9 ) []  $ 
- []
-
-
-Overfull \hbox (8.12814pt too wide) detected at line 417
+Overfull \hbox (8.12814pt too wide) detected at line 415
 []
  []
 
 
-Underfull \hbox (badness 5050) in paragraph at lines 435--436
+Underfull \hbox (badness 5050) in paragraph at lines 433--434
 []\T1/cmbr/m/n/9 Considering the two \T1/cmbr/bx/n/9 or-thog-o-nal
  []
 
 File: ./figures/github.png Graphic file (type png)
 <use ./figures/github.png>
-Package pdftex.def Info: ./figures/github.png  used on input line 457.
+Package pdftex.def Info: ./figures/github.png  used on input line 434.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
 [3]
-Overfull \hbox (6.30675pt too wide) detected at line 499
+Overfull \hbox (6.30675pt too wide) detected at line 504
 []
  []
 
 
-Overfull \hbox (7.01321pt too wide) detected at line 525
+Overfull \hbox (7.01321pt too wide) detected at line 530
 []
  []
 
-<./figures/Velvet_euler.pdf, id=276, 109.72995pt x 109.03134pt>
+<./figures/Velvet_euler.pdf, id=343, 109.72995pt x 109.03134pt>
 File: ./figures/Velvet_euler.pdf Graphic file (type pdf)
 <use ./figures/Velvet_euler.pdf>
-Package pdftex.def Info: ./figures/Velvet_euler.pdf  used on input line 529.
+Package pdftex.def Info: ./figures/Velvet_euler.pdf  used on input line 534.
 (pdftex.def)             Requested size: 157.34375pt x 156.35616pt.
-<./figures/HarmonicOscillator.pdf, id=277, 141.46852pt x 289.54233pt>
-File: ./figures/HarmonicOscillator.pdf Graphic file (type pdf)
-<use ./figures/HarmonicOscillator.pdf>
-Package pdftex.def Info: ./figures/HarmonicOscillator.pdf  used on input line 536.
-(pdftex.def)             Requested size: 157.34375pt x 322.06732pt.
 File: ./figures/github.png Graphic file (type png)
 <use ./figures/github.png>
-Package pdftex.def Info: ./figures/github.png  used on input line 539.
+Package pdftex.def Info: ./figures/github.png  used on input line 538.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
-[4 <./figures/Velvet_euler.pdf>]
+[4]
+<./figures/HarmonicOscillator.pdf, id=356, 155.01915pt x 138.08008pt>
+File: ./figures/HarmonicOscillator.pdf Graphic file (type pdf)
+<use ./figures/HarmonicOscillator.pdf>
+Package pdftex.def Info: ./figures/HarmonicOscillator.pdf  used on input line 540.
+(pdftex.def)             Requested size: 157.34375pt x 140.15294pt.
+
 Chapter 3.
-(./figures/Canonical_ensemble.pdf_tex
-<./figures/Canonical_ensemble.pdf, id=309, page=1, 218.13602pt x 119.58856pt>
-File: ./figures/Canonical_ensemble.pdf Graphic file (type pdf)
-<use ./figures/Canonical_ensemble.pdf, page 1>
-Package pdftex.def Info: ./figures/Canonical_ensemble.pdf , page1 used on input line 65.
-(pdftex.def)             Requested size: 157.34375pt x 86.26427pt.
+(./canonical.pdf_tex
+<canonical.pdf, id=357, page=1, 394.78482pt x 229.06265pt>
+File: canonical.pdf Graphic file (type pdf)
+<use canonical.pdf, page 1>
+Package pdftex.def Info: canonical.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 157.34375pt x 91.29138pt.
+<canonical.pdf, id=358, page=2, 394.78482pt x 229.06265pt>
+File: canonical.pdf Graphic file (type pdf)
+<use canonical.pdf, page 2>
+Package pdftex.def Info: canonical.pdf , page2 used on input line 58.
+(pdftex.def)             Requested size: 157.34375pt x 91.29138pt.
+<canonical.pdf, id=359, page=3, 394.78482pt x 229.06265pt>
+File: canonical.pdf Graphic file (type pdf)
+<use canonical.pdf, page 3>
+Package pdftex.def Info: canonical.pdf , page3 used on input line 63.
+(pdftex.def)             Requested size: 157.34375pt x 91.29138pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 560--560
+Underfull \hbox (badness 10000) in paragraph at lines 564--564
 []\T1/cmbr/m/sl/8 Figure 3.1 \T1/cmbr/m/n/8 ^^U |Canon-i-cal en-sem-ble
  []
 
 File: ./figures/github.png Graphic file (type png)
 <use ./figures/github.png>
-Package pdftex.def Info: ./figures/github.png  used on input line 603.
+Package pdftex.def Info: ./figures/github.png  used on input line 601.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
-[5 <./figures/HarmonicOscillator.pdf> <./figures/Canonical_ensemble.pdf>]
-Underfull \hbox (badness 7362) in paragraph at lines 608--609
+[5 <./figures/Velvet_euler.pdf> <./figures/HarmonicOscillator.pdf> <./canonical.pdf> <./canonical.pdf
+
+pdfTeX warning: pdflatex (file ./canonical.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./canonical.pdf
+
+pdfTeX warning: pdflatex (file ./canonical.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Underfull \hbox (badness 7362) in paragraph at lines 611--612
 []\T1/cmbr/m/n/9 The Langevin ther-mo-stat is a
  []
 
 
-Overfull \hbox (4.12976pt too wide) detected at line 619
+Overfull \hbox (4.12976pt too wide) detected at line 622
 \OML/cmbrm/m/it/9 x\OT1/cmbr/m/n/9 (\OML/cmbrm/m/it/9 t\OT1/cmbr/m/n/9 ) = \OML/cmbrm/m/it/9 x[]e[] \OT1/cmbr/m/n/9 + \OML/cmbrm/m/it/9 ^^\[] [][] e[]f\OT1/cmbr/m/n/9 (\OML/cmbrm/m/it/9 t[]\OT1/cmbr/m/n/9 )\OML/cmbrm/m/it/9 dt[]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 657--658
-[]\T1/cmbr/m/n/9 Studying the stochas-tics ther-
- []
-
 File: ./figures/github.png Graphic file (type png)
 <use ./figures/github.png>
-Package pdftex.def Info: ./figures/github.png  used on input line 680.
+Package pdftex.def Info: ./figures/github.png  used on input line 676.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
 [6]
-<./figures/NoseHooverChain.png, id=344, 1135.24126pt x 856.19875pt>
+<./figures/NoseHooverChain.png, id=424, 1135.24126pt x 856.19875pt>
 File: ./figures/NoseHooverChain.png Graphic file (type png)
 <use ./figures/NoseHooverChain.png>
-Package pdftex.def Info: ./figures/NoseHooverChain.png  used on input line 699.
+Package pdftex.def Info: ./figures/NoseHooverChain.png  used on input line 702.
 (pdftex.def)             Requested size: 157.34375pt x 118.66507pt.
-<figures/MD_energy_temperature.pdf, id=346, 243.62418pt x 142.46803pt>
+<figures/MD_energy_temperature.pdf, id=426, 243.62418pt x 225.93988pt>
 File: figures/MD_energy_temperature.pdf Graphic file (type pdf)
 <use figures/MD_energy_temperature.pdf>
-Package pdftex.def Info: figures/MD_energy_temperature.pdf  used on input line 710.
-(pdftex.def)             Requested size: 157.34375pt x 92.01617pt.
-<figures/thermostats_PDF.pdf, id=348, 248.36742pt x 429.04242pt>
+Package pdftex.def Info: figures/MD_energy_temperature.pdf  used on input line 715.
+(pdftex.def)             Requested size: 157.34375pt x 145.92833pt.
+<figures/thermostats_PDF.pdf, id=428, 248.36742pt x 429.04242pt>
 File: figures/thermostats_PDF.pdf Graphic file (type pdf)
 <use figures/thermostats_PDF.pdf>
-Package pdftex.def Info: figures/thermostats_PDF.pdf  used on input line 717.
+Package pdftex.def Info: figures/thermostats_PDF.pdf  used on input line 726.
 (pdftex.def)             Requested size: 157.34375pt x 271.81042pt.
 File: ./figures/github.png Graphic file (type png)
 <use ./figures/github.png>
-Package pdftex.def Info: ./figures/github.png  used on input line 727.
+Package pdftex.def Info: ./figures/github.png  used on input line 730.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
- [7 <./figures/NoseHooverChain.png> <./figures/MD_energy_temperature.pdf> <./figures/thermostats_PDF.pdf>] (./decay_schema.pdf_tex
-<decay_schema.pdf, id=424, page=1, 286.24757pt x 103.23837pt>
+ [7 <./figures/NoseHooverChain.png> <./figures/MD_energy_temperature.pdf>] (./decay_schema.pdf_tex
+<decay_schema.pdf, id=470, page=1, 286.24757pt x 103.23837pt>
 File: decay_schema.pdf Graphic file (type pdf)
 <use decay_schema.pdf, page 1>
 Package pdftex.def Info: decay_schema.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 157.34375pt x 56.74977pt.
 )
-<figures/velocity_autocorrelation.pdf, id=425, 248.36742pt x 284.50241pt>
+<figures/velocity_autocorrelation.pdf, id=472, 248.36742pt x 284.50241pt>
 File: figures/velocity_autocorrelation.pdf Graphic file (type pdf)
 <use figures/velocity_autocorrelation.pdf>
-Package pdftex.def Info: figures/velocity_autocorrelation.pdf  used on input line 751.
+Package pdftex.def Info: figures/velocity_autocorrelation.pdf  used on input line 763.
 (pdftex.def)             Requested size: 157.34375pt x 180.24025pt.
-<figures/velocity_autocorrelation_density.pdf, id=426, 238.04648pt x 143.80138pt>
+<figures/velocity_autocorrelation_density.pdf, id=474, 238.04648pt x 230.39822pt>
 File: figures/velocity_autocorrelation_density.pdf Graphic file (type pdf)
 <use figures/velocity_autocorrelation_density.pdf>
-Package pdftex.def Info: figures/velocity_autocorrelation_density.pdf  used on input line 769.
-(pdftex.def)             Requested size: 157.34375pt x 95.054pt.
-
-Overfull \hbox (12.11732pt too wide) detected at line 784
-[]
- []
-
+Package pdftex.def Info: figures/velocity_autocorrelation_density.pdf  used on input line 781.
+(pdftex.def)             Requested size: 157.34375pt x 152.2953pt.
 File: ./figures/github.png Graphic file (type png)
 <use ./figures/github.png>
 Package pdftex.def Info: ./figures/github.png  used on input line 784.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
-[8 <./decay_schema.pdf> <./figures/velocity_autocorrelation.pdf> <./figures/velocity_autocorrelation_density.pdf>]
-<figures/diffusion_calculation.pdf, id=494, 240.4576pt x 142.46803pt>
+ [8 <./figures/thermostats_PDF.pdf> <./decay_schema.pdf> <./figures/velocity_autocorrelation.pdf>]
+Overfull \hbox (12.11732pt too wide) detected at line 796
+[]
+ []
+
+<figures/diffusion_calculation.pdf, id=555, 245.30766pt x 229.06488pt>
 File: figures/diffusion_calculation.pdf Graphic file (type pdf)
 <use figures/diffusion_calculation.pdf>
-Package pdftex.def Info: figures/diffusion_calculation.pdf  used on input line 792.
-(pdftex.def)             Requested size: 157.34375pt x 93.22485pt.
-
+Package pdftex.def Info: figures/diffusion_calculation.pdf  used on input line 804.
+(pdftex.def)             Requested size: 157.34375pt x 146.92957pt.
 Chapter 4.
-LaTeX Font Info:    Trying to load font information for TS1+cmbr on input line 855.
-(/usr/share/texlive/texmf-dist/tex/latex/cmbright/ts1cmbr.fd
-File: ts1cmbr.fd 2005/04/13 v8.1 (WaS)
+
+Underfull \hbox (badness 10000) in paragraph at lines 842--844
+\T1/cmbr/m/n/9 prob-a-bil-ity dis-tri-bu-tion re-mains un-
+ []
+
+File: ./figures/github.png Graphic file (type png)
+<use ./figures/github.png>
+Package pdftex.def Info: ./figures/github.png  used on input line 844.
+(pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
+[9 <./figures/velocity_autocorrelation_density.pdf> <./figures/diffusion_calculation.pdf>]
+<figures/ising.pdf, id=615, 197.47778pt x 108.10408pt>
+File: figures/ising.pdf Graphic file (type pdf)
+<use figures/ising.pdf>
+Package pdftex.def Info: figures/ising.pdf  used on input line 870.
+(pdftex.def)             Requested size: 157.34375pt x 86.13696pt.
+File: ./figures/github.png Graphic file (type png)
+<use ./figures/github.png>
+Package pdftex.def Info: ./figures/github.png  used on input line 943.
+(pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
+ [10 <./figures/ising.pdf>]
+<figures/magnetization_mfa.pdf, id=639, 243.89363pt x 225.93988pt>
+File: figures/magnetization_mfa.pdf Graphic file (type pdf)
+<use figures/magnetization_mfa.pdf>
+Package pdftex.def Info: figures/magnetization_mfa.pdf  used on input line 953.
+(pdftex.def)             Requested size: 157.34375pt x 145.7594pt.
+<figures/first_order_finite.png, id=647, 499.8675pt x 606.265pt>
+File: figures/first_order_finite.png Graphic file (type png)
+<use figures/first_order_finite.png>
+Package pdftex.def Info: figures/first_order_finite.png  used on input line 985.
+(pdftex.def)             Requested size: 157.34375pt x 190.83572pt.
+File: ./figures/github.png Graphic file (type png)
+<use ./figures/github.png>
+Package pdftex.def Info: ./figures/github.png  used on input line 994.
+(pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
+ [11 <./figures/magnetization_mfa.pdf> <./figures/first_order_finite.png>]
+<figures/Ising2D_1st_order_transition.pdf, id=687, 624.89717pt x 296.89243pt>
+File: figures/Ising2D_1st_order_transition.pdf Graphic file (type pdf)
+<use figures/Ising2D_1st_order_transition.pdf>
+Package pdftex.def Info: figures/Ising2D_1st_order_transition.pdf  used on input line 999.
+(pdftex.def)             Requested size: 500.484pt x 237.79059pt.
+LaTeX Font Info:    Trying to load font information for T1+cmtl on input line 1001.
+ (/usr/share/texlive/texmf-dist/tex/latex/cmbright/t1cmtl.fd
+File: t1cmtl.fd 2005/04/13 v8.1 (WaS)
 )
+<figures/2nd_order_scaling.pdf, id=692, 239.472pt x 225.95067pt>
+File: figures/2nd_order_scaling.pdf Graphic file (type pdf)
+<use figures/2nd_order_scaling.pdf>
+Package pdftex.def Info: figures/2nd_order_scaling.pdf  used on input line 1022.
+(pdftex.def)             Requested size: 157.34375pt x 148.45905pt.
 File: ./figures/github.png Graphic file (type png)
 <use ./figures/github.png>
-Package pdftex.def Info: ./figures/github.png  used on input line 873.
+Package pdftex.def Info: ./figures/github.png  used on input line 1028.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
- [9{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./figures/diffusion_calculation.pdf>]
+ [12 <./figures/Ising2D_1st_order_transition.pdf> <./figures/2nd_order_scaling.pdf>]
+Underfull \hbox (badness 5460) in paragraph at lines 1062--1062
+|\T1/cmbr/bx/n/9 a) []Me-chan-i-cal and Ther-mo-dy-namic
+ []
+
+./lecture_notes.tex:1110: Undefined control sequence.
+l.1110 ...n to the final estimation $\Omega_{\test
+                                                  {est}}$ of the densoty of ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 File: ./figures/github.png Graphic file (type png)
 <use ./figures/github.png>
-Package pdftex.def Info: ./figures/github.png  used on input line 932.
+Package pdftex.def Info: ./figures/github.png  used on input line 1111.
 (pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
- [10] (./lecture_notes.aux)
+[13]
+./lecture_notes.tex:1115: Undefined control sequence.
+l.1115         \Omega_{\test
+                            {est}}(M,Q) = \frac{\sum_{\nu} N_{\nu} \Omega_{\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<figures/density_omega.pdf, id=819, 248.84946pt x 284.83266pt>
+File: figures/density_omega.pdf Graphic file (type pdf)
+<use figures/density_omega.pdf>
+Package pdftex.def Info: figures/density_omega.pdf  used on input line 1122.
+(pdftex.def)             Requested size: 165.21141pt x 189.10274pt.
+
+Overfull \hbox (2.1772pt too wide) in paragraph at lines 1122--1123
+ | [] 
+ []
+
+./lecture_notes.tex:1131: Undefined control sequence.
+<argument> \sum _{\nu } N_{\nu } \e 
+                                    ^{\beta (F_{\nu }- E_{\nu }(M,Q))}
+l.1131 ...{\nu} \e^{\beta(F_{\nu}- E_{\nu}(M,Q))}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+LaTeX Font Info:    Font shape `T1/cmbr/m/it' in size <10> not available
+(Font)              Font shape `T1/cmbr/m/sl' tried instead on input line 1143.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1144--1144
+\T1/cmbr/m/n/10 978-3-319-16374-1 (Springer,
+ []
+
+
+Underfull \hbox (badness 6893) in paragraph at lines 1144--1144
+\T1/cmtl/m/n/10 science / article / pii /
+ []
+
+File: ./figures/github.png Graphic file (type png)
+<use ./figures/github.png>
+Package pdftex.def Info: ./figures/github.png  used on input line 1147.
+(pdftex.def)             Requested size: 28.44997pt x 28.45274pt.
+[14 <./figures/density_omega.pdf>] (./lecture_notes.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1871,24 +1953,24 @@ L3 programming layer <2024-01-22>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `lecture_notes.out' has not changed.
-(rerunfilecheck)             Checksum: C6DC2213DF2675CB029E3BA8C1259644;3680.
+(rerunfilecheck)             Checksum: FDEC54215867CD6D5AC41CCBFB769AEA;5648.
 Package logreq Info: Writing requests to 'lecture_notes.run.xml'.
 \openout1 = `lecture_notes.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 60476 strings out of 474222
- 1404668 string characters out of 5748733
- 2453470 words of memory out of 5000000
- 81729 multiletter control sequences out of 15000+600000
- 583847 words of font info for 102 fonts, out of 8000000 for 9000
+ 59630 strings out of 474222
+ 1387377 string characters out of 5748733
+ 2431913 words of memory out of 5000000
+ 80848 multiletter control sequences out of 15000+600000
+ 584827 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 94i,19n,93p,1207b,2039s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbbx10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmo8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmo9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmr10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmr8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmr9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbsr8.pfb>
-Output written on lecture_notes.pdf (10 pages, 4914630 bytes).
+ 94i,20n,93p,1246b,2745s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/hfbright/hfbrsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbbx10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmo10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmo8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmo9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmr10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmr8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbmr9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbsr8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbtl10.pfb>
+Output written on lecture_notes.pdf (14 pages, 8987537 bytes).
 PDF statistics:
- 623 PDF objects out of 1000 (max. 8388607)
- 458 compressed objects within 5 object streams
- 77 named destinations out of 1000 (max. 500000)
- 395 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 990 PDF objects out of 1000 (max. 8388607)
+ 738 compressed objects within 8 object streams
+ 122 named destinations out of 1000 (max. 500000)
+ 515 words of extra memory for PDF output out of 10000 (max. 10000000)
 
