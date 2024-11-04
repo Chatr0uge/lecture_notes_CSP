@@ -144,7 +144,7 @@
         \node[fill=MyRed, inner sep=0pt, line width=0pt, minimum width=.12\paperwidth, minimum height=\headheight] (github) at ([yshift=-1.2cm, xshift=.1cm]current page.north east)  {
             \begingroup
             \hypersetup{pdfborder={0 0 0}}
-            \hspace{-1.5cm}\href{https://github.com/Chatr0uge/Internship_SPC}{\includegraphics[height=1cm]{./figures/github.png}}
+            \hspace{-1.5cm}\href{https://github.com/Chatr0uge/lecture_notes_CSP}{\includegraphics[height=1cm]{./figures/github.png}}
             \endgroup
     };
     \end{tikzpicture}
@@ -1107,12 +1107,12 @@ The goal here is to compute the density of states $\Omega(M,Q)$ for the 2d ising
     \label{eq:density of states}
 \end{equation}
 
-Where $ P_{\nu}(M,Q) = \langle \frac{N_{\nu}(M,Q)}{N_{\nu}}\rangle $ is the probability of finding the system in the bin $(M,Q)$ for the group of walker $\nu$. From this we can derive all the thermodynamic quantity of the system for one group of walker $\nu$, i.e one pair of value $(h,k)$. One can already tell that sampling the entire phase space $(M,Q)$ using only one pair of value $h,k$ is unfeasiblem hence we need to find a way combining several group of walker, and weight their contribution to the final estimation $\Omega_{\test{est}}$ of the densoty of states. 
+Where $ P_{\nu}(M,Q) = \langle \frac{N_{\nu}(M,Q)}{N_{\nu}}\rangle $ is the probability of finding the system in the bin $(M,Q)$ for the group of walker $\nu$. From this we can derive all the thermodynamic quantity of the system for one group of walker $\nu$, i.e one pair of value $(h,k)$. One can already tell that sampling the entire phase space $(M,Q)$ using only one pair of value $h,k$ is unfeasiblem hence we need to find a way combining several group of walker, and weight their contribution to the final estimation $\Omega_{\text{est}}$ of the densoty of states. 
 
 This is generally done using the \textbf{WHAM}, weighted histogram analysis : Where the estimate is computed using the following relation : 
 
     \begin{equation}
-        \Omega_{\test{est}}(M,Q) = \frac{\sum_{\nu} N_{\nu} \Omega_{\nu}(M,Q)}{\sum_{\nu} N_{\nu}}
+        \Omega_{\text{est}}(M,Q) = \frac{\sum_{\nu} N_{\nu} \Omega_{\nu}(M,Q)}{\sum_{\nu} N_{\nu}}
         \label{eq:WHAM}
     \end{equation}
 
@@ -1128,7 +1128,7 @@ This is generally done using the \textbf{WHAM}, weighted histogram analysis : Wh
 However the exponential term in $\Omega_{\nu}(M,Q)$ can be a source of numerical instability, hence it is often replaced by the following relation : 
     \begin{equation*}
         \Omega_{\text{est}}(M,Q) \approx \frac{\sum_{\nu} N_{\nu}(M,Q)}
-        {\sum_{\nu} N_{\nu} \e^{\beta(F_{\nu}- E_{\nu}(M,Q))}}
+        {\sum_{\nu} N_{\nu} e^{\beta (F_{\nu}- E_{\nu}(M,Q))}}
         \label{eq:WHAM2}
     \end{equation*}
 

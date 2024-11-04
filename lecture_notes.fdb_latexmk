@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber lecture_notes"] 1730747629.73486 "lecture_notes.bcf" "lecture_notes.bbl" "lecture_notes" 1730751510.79214 0
+["biber lecture_notes"] 1730747629.73486 "lecture_notes.bcf" "lecture_notes.bbl" "lecture_notes" 1730751876.46455 0
   "bibliography.bib" 1730728401.28002 4311 ef50c37a31a24a6f232e128c5bbcc529 ""
-  "lecture_notes.bcf" 1730751510.48257 108826 057172433863117d066418a51aa92f13 "pdflatex"
+  "lecture_notes.bcf" 1730751876.08652 108826 057172433863117d066418a51aa92f13 "pdflatex"
   (generated)
   "lecture_notes.bbl"
   "lecture_notes.blg"
   (rewritten before read)
-["pdflatex"] 1730751504.12914 "lecture_notes.tex" "lecture_notes.pdf" "lecture_notes" 1730751510.79268 2
+["pdflatex"] 1730751861.85175 "lecture_notes.tex" "lecture_notes.pdf" "lecture_notes" 1730751876.46523 0
   "/etc/texmf/web2c/texmf.cnf" 1719581977.21311 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -380,12 +380,12 @@
   "figures/thermostats_PDF.pdf" 1730217381.50276 317149 f7d4a5d0a52968b4975fcf1508b9740a ""
   "figures/velocity_autocorrelation.pdf" 1730287717.79747 1867266 501744d39e17ae9bb4c4c51f15c7353f ""
   "figures/velocity_autocorrelation_density.pdf" 1730672209.90719 1998307 ce0890b46b27a81abe5341808bc69ae0 ""
-  "lecture_notes.aux" 1730751510.4707 21934 d4c51e2337d8f7171a6e5ad81d4d87be "pdflatex"
+  "lecture_notes.aux" 1730751876.06897 21934 d4c51e2337d8f7171a6e5ad81d4d87be "pdflatex"
   "lecture_notes.bbl" 1730747630.80451 14242 26d220f3021d2c9c3d0dba1024a9b858 "biber lecture_notes"
-  "lecture_notes.out" 1730751510.47693 5648 fdec54215867cd6d5ac41ccbfb769aea "pdflatex"
-  "lecture_notes.run.xml" 1730751510.4842 2471 997a9ba9bf2e0f1c0a1d0630a36cb9ad "pdflatex"
-  "lecture_notes.tex" 1730751502.96934 85947 d42a8bfecf39326991890c310cabd7aa ""
-  "lecture_notes.toc" 1730751510.48438 4494 86c6a71974364fe54fb18a1ec08e2f9a "pdflatex"
+  "lecture_notes.out" 1730751876.07861 5648 fdec54215867cd6d5ac41ccbfb769aea "pdflatex"
+  "lecture_notes.run.xml" 1730751876.0886 2471 997a9ba9bf2e0f1c0a1d0630a36cb9ad "pdflatex"
+  "lecture_notes.tex" 1730751859.99196 85950 30fb23797bf213b2ec9dab56e614a08a ""
+  "lecture_notes.toc" 1730751876.08913 4494 86c6a71974364fe54fb18a1ec08e2f9a "pdflatex"
   (generated)
   "lecture_notes.aux"
   "lecture_notes.bcf"
